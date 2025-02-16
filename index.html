@@ -47,7 +47,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      margin-top: 60px; /* Ridotto lo spazio sopra il banner */
+      margin-top: 60px; /* Ridotto lo spazio tra il banner e il menu */
       position: relative;
     }
     .section {
@@ -171,7 +171,6 @@
     }
     .address-box p {
       margin-bottom: 20px;
-      font-size: 1.3rem;
     }
     .copy-btn {
       background-color: #333;
@@ -186,7 +185,7 @@
     .copy-btn:hover {
       background-color: #555;
     }
-    /* Media Queries per ottimizzare per dispositivi mobili */
+    /* Media Queries per la Responsività */
     @media (max-width: 768px) {
       .menu a {
         font-size: 1rem;
@@ -220,7 +219,10 @@
         font-size: 2rem;
       }
       .address-box p {
-        font-size: 1rem;
+        font-size: 1rem; /* Ottimizzato per dispositivi mobili */
+      }
+      .copy-btn {
+        font-size: 0.9rem; /* Ottimizzato per dispositivi mobili */
       }
     }
 
@@ -246,7 +248,10 @@
         font-size: 1.5rem;
       }
       .address-box p {
-        font-size: 1rem;
+        font-size: 1.1rem; /* Ottimizzato per versioni mobili */
+      }
+      .copy-btn {
+        font-size: 0.8rem; /* Ottimizzato per versioni mobili */
       }
     }
   </style>
