@@ -156,7 +156,7 @@
       border: 2px solid white;
       max-width: 600px;
       width: 80%;
-      font-size: 4rem; /* Increased font size */
+      font-size: 4rem;
       text-align: center;
       margin-left: auto;
       margin-right: auto;
@@ -169,6 +169,64 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .menu a {
+        font-size: 1rem;
+        margin: 0 10px;
+      }
+      .banner-section {
+        height: 250px;
+      }
+      .section h2 {
+        font-size: 2.5rem;
+      }
+      .how-to-buy-box div {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .how-to-buy-box {
+        flex-direction: column;
+        align-items: center;
+      }
+      .footer {
+        padding: 10px;
+      }
+      .footer a {
+        font-size: 0.9rem;
+        margin: 5px;
+      }
+      .text-box {
+        width: 90%;
+      }
+      .tokenomics-box {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .menu {
+        padding: 10px 0;
+      }
+      .menu a {
+        font-size: 0.9rem;
+        margin: 0 5px;
+      }
+      .section h2 {
+        font-size: 2rem;
+      }
+      .how-to-buy-box {
+        gap: 10px;
+      }
+      .how-to-buy-box div {
+        padding: 20px;
+        font-size: 1rem;
+      }
+      .tokenomics-box {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
