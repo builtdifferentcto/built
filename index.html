@@ -43,7 +43,7 @@
     .banner-section {
       width: 100%;
       height: 400px;
-      background-image: url('https://imagizer.imageshack.com/img922/2849/tK5Fo0.jpg'); /* Nuovo URL */
+      background-image: url('https://imagizer.imageshack.com/img922/2849/tK5Fo0.jpg');
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -156,7 +156,35 @@
       margin-left: auto;
       margin-right: auto;
     }
-
+    .address-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      border: 2px solid white;
+      max-width: 600px;
+      width: 80%;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40px;
+    }
+    .address-box p {
+      margin-bottom: 20px;
+    }
+    .copy-btn {
+      background-color: #333;
+      padding: 10px 20px;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .copy-btn:hover {
+      background-color: #555;
+    }
     /* Media Queries for Responsiveness */
     @media (max-width: 768px) {
       .menu a {
@@ -229,6 +257,12 @@
   <!-- SEZIONE BANNER -->
   <div class="banner-section"></div>
 
+  <!-- TESTO COPIABILE -->
+  <div class="address-box">
+    <p>CA: vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</p>
+    <button class="copy-btn" onclick="copyToClipboard()">Copy Address</button>
+  </div>
+
   <!-- CONTENUTO PRINCIPALE -->
   <div class="container" id="main-content">
     
@@ -285,5 +319,17 @@
     </div>
   </div>
 
+  <script>
+    function copyToClipboard() {
+      const text = "vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump";
+      navigator.clipboard.writeText(text)
+        .then(() => {
+          alert('Address copied to clipboard!');
+        })
+        .catch(err => {
+          console.error('Error copying text: ', err);
+        });
+    }
+  </script>
 </body>
 </html>
