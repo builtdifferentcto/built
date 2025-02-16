@@ -78,12 +78,16 @@
       background-color: white;
       color: #111;
     }
-    /* Testo sotto i socials */
+    /* Testo sotto i socials - CA Copy */
     .social-text {
       text-align: center;
-      font-size: 1.2rem;
-      color: white;
       margin-bottom: 20px;
+    }
+    #ca-text {
+      font-size: 2rem;  /* Font ingrandito */
+      color: white;
+      cursor: pointer;
+      user-select: none;
     }
     .section {
       padding: 80px 20px;
@@ -126,9 +130,7 @@
       width: 100%;
       font-size: 1.3rem;
       text-align: center;
-      margin-top: 40px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 40px auto 0;
     }
     .footer {
       background-color: #111;
@@ -151,7 +153,7 @@
       width: 80%;
       font-size: 1.3rem;
       text-align: center;
-      margin: 40px auto 0 auto;
+      margin: 40px auto 0;
     }
     .text-box ul {
       list-style: none;
@@ -177,7 +179,7 @@
       width: 80%;
       font-size: 4rem;
       text-align: center;
-      margin: 40px auto 0 auto;
+      margin: 40px auto 0;
     }
     .tokenomics-box img {
       margin-top: 20px;
@@ -187,7 +189,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     /* Media Queries per la Responsività */
     @media (max-width: 768px) {
       .menu a {
@@ -222,7 +223,6 @@
         font-size: 2rem;
       }
     }
-
     @media (max-width: 480px) {
       .menu {
         padding: 10px 0;
@@ -252,8 +252,8 @@
       .tokenomics-box {
         font-size: 1.5rem;
       }
-      .social-text {
-        font-size: 1rem;
+      #ca-text {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -282,7 +282,7 @@
 
   <!-- Testo aggiuntivo sotto i socials -->
   <div class="social-text">
-    <p>CA: vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</p>
+    <p id="ca-text" onclick="copyCA()">CA: vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</p>
   </div>
 
   <!-- CONTENUTO PRINCIPALE -->
@@ -340,6 +340,20 @@
       <a href="https://t.me/BUILTportal" target="_blank">Telegram</a>
     </div>
   </div>
+
+  <!-- Script per copiare il CA negli appunti -->
+  <script>
+    function copyCA() {
+      const caText = document.getElementById("ca-text").textContent;
+      navigator.clipboard.writeText(caText)
+        .then(() => {
+          alert("Indirizzo copiato!");
+        })
+        .catch(err => {
+          alert("Errore nella copia: " + err);
+        });
+    }
+  </script>
 
 </body>
 </html>
