@@ -295,65 +295,64 @@
     <!-- SEZIONE ABOUT -->
     <div id="about" class="section">
       <h2>ABOUT</h2>
+      <!-- Inserimento dell'immagine sopra il testo -->
+      <img src="https://imagizer.imageshack.com/img923/9808/BwRx7N.jpg" alt="About Image" style="width: 100%; max-width: 600px; margin-bottom: 30px;">
       <div class="text-box">
         <p>COMMUNITY TAKEOVER – $BUILT DIFFERENT IS BACK!</p>
         <p>They tried to stop us. They tried to shut us down. But we are DIFFERENT.</p>
-        <p>$BUILT DIFFERENT wasn’t just a memecoin—it was a mentality. We started with fire in our veins, backed by major names like Davinci (buy 1$ of Bitcoin) and a community that believed in our vision. Then came the rug… but instead of staying down, we got back up. Why? Because we are built different.</p>
-        <p>Now it’s our turn. The community takes control. Our mission? To bring $BUILT DIFFERENT where it was always meant to be. No looking back, only forward.</p>
-        <p>No corrupt devs. Only united holders. No false promises. Only actions. No fear. Only determination.</p>
-        <p>If you’re here, it means you still believe in this vision. Let’s take back what’s ours.</p>
-        <p>Join the movement. Spread the revolution. Show the world we are truly DIFFERENT.</p>
+        <p>$BUILT DIFFERENT wasn’t just a memecoin—it was a mentality. We started with fire in our veins, backed by major names like Davinci (buy 1$ of Bitcoin) and a community that believed in our vision.</p>
       </div>
     </div>
 
     <!-- SEZIONE HOW TO BUY -->
-    <div id="how-to-buy" class="section" style="margin-top: 120px;">
+    <div id="how-to-buy" class="section">
       <h2>How to Buy</h2>
       <div class="how-to-buy-box">
         <div>
-          <h3>Download Wallet</h3>
-          <p>Download a Solana wallet, such as Phantom, which we highly recommend. You can easily install it from your device’s app store or as a Chrome extension for desktop users.</p>
+          <h3>Step 1</h3>
+          <p>Get a Solana wallet (e.g., Phantom, Sollet, etc.)</p>
         </div>
         <div>
-          <h3>Add Solana</h3>
-          <p>Obtain Solana directly through the Phantom wallet, or alternatively, transfer Solana to your new wallet from an exchange.</p>
+          <h3>Step 2</h3>
+          <p>Buy Solana (SOL) on an exchange like Binance or Coinbase</p>
         </div>
       </div>
-
-      <!-- SEZIONE SWAP INFO -->
-      <div class="swap-info">
-        <h3>Swap SOL For $BUILT</h3>
-        <p>Visit decentralized exchanges (DEXs) like Raydium, and paste the $BUILT contract address provided on this website to swap your SOL for $BUILT. Alternatively, click the button below.</p>
+      <div class="how-to-buy-box">
+        <div>
+          <h3>Step 3</h3>
+          <p>Transfer SOL to your wallet</p>
+        </div>
+        <div>
+          <h3>Step 4</h3>
+          <p>Swap SOL for $BUILT on a DEX (e.g., Raydium, Jupiter, etc.)</p>
+        </div>
       </div>
     </div>
 
     <!-- SEZIONE TOKENOMICS -->
     <div id="tokenomics" class="section">
-      <h2>TOKENOMICS</h2>
+      <h2>Tokenomics</h2>
       <div class="tokenomics-box">
-        <p>1,000,000,000 $BUILT</p>
-        <img src="https://imagizer.imageshack.com/img923/4705/8vTFg2.gif" alt="Tokenomics GIF" />
+        <p>Token Distribution</p>
+        <img src="https://imagizer.imageshack.com/img922/8365/rsb5oJ.jpg" alt="Tokenomics Image">
       </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="footer">
-      <p>All rights reserved by BuiltDifferentCTO.</p>
-      <p>powered by <a href="https://x.com/weBgen_graphics" target="_blank">webGen</a></p>
     </div>
   </div>
 
-  <!-- Script per copiare il CA negli appunti -->
+  <!-- Footer -->
+  <div class="footer">
+    <p>All rights reserved by BuiltDifferentCTO | powered by webGen</p>
+  </div>
+
+  <!-- JavaScript per copiare l'indirizzo CA -->
   <script>
     function copyCA() {
-      const caText = document.getElementById("ca-text").textContent;
-      navigator.clipboard.writeText(caText)
-        .then(() => {
-          alert("Indirizzo copiato!");
-        })
-        .catch(err => {
-          alert("Errore nella copia: " + err);
-        });
+      var caText = document.getElementById('ca-text');
+      navigator.clipboard.writeText(caText.innerText).then(function() {
+        alert('Address copied to clipboard!');
+      }).catch(function() {
+        alert('Failed to copy address.');
+      });
     }
   </script>
 </body>
