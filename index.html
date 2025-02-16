@@ -125,54 +125,29 @@
     .how-to-buy-box div p {
       margin-bottom: 20px;
     }
-    .swap-info {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      border-radius: 15px;
-      border: 2px solid white;
-      max-width: 600px;
-      width: 100%;
-      font-size: 1.3rem;
-      text-align: center;
-      margin: 40px auto 0;
-    }
-    .text-box {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      border-radius: 15px;
-      border: 2px solid white;
-      max-width: 800px;
-      width: 80%;
-      font-size: 1.3rem;
-      text-align: center;
-      margin: 40px auto 0;
-    }
-    .text-box ul {
-      list-style: none;
-      padding: 0;
-    }
-    .section p,
-    .section h3 {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-    }
-    .section ul {
-      list-style: none;
-      padding: 0;
-    }
-    .section ul li {
-      margin: 10px 0;
-    }
+    .swap-info,
+    .text-box,
     .tokenomics-box {
       background-color: rgba(255, 255, 255, 0.1);
       padding: 30px;
       border-radius: 15px;
       border: 2px solid white;
-      max-width: 600px;
-      width: 80%;
-      font-size: 4rem;
+      font-size: 1.3rem;
       text-align: center;
       margin: 40px auto 0;
+    }
+    .swap-info {
+      max-width: 600px;
+      width: 100%;
+    }
+    .text-box {
+      max-width: 800px;
+      width: 80%;
+    }
+    .tokenomics-box {
+      font-size: 4rem;
+      width: 80%;
+      max-width: 600px;
     }
     .tokenomics-box img {
       margin-top: 20px;
@@ -323,37 +298,35 @@
       <!-- SEZIONE SWAP INFO -->
       <div class="swap-info">
         <h3>Swap SOL For $BUILT</h3>
-        <p>Visit decentralized exchanges (DEXs) like Raydium, and paste the $BUILT contract address provided on this website to swap your SOL for $BUILT. Alternatively, click the button below.</p>
+        <p>Visit decentralized exchanges (DEXs) like Raydium, and paste the $BUILT contract address provided on this website to swap your SOL for $BUILT tokens.</p>
       </div>
     </div>
 
     <!-- SEZIONE TOKENOMICS -->
     <div id="tokenomics" class="section">
-      <h2>TOKENOMICS</h2>
+      <h2>Tokenomics</h2>
       <div class="tokenomics-box">
-        <p>1,000,000,000 $BUILT</p>
-        <img src="https://imagizer.imageshack.com/img923/4705/8vTFg2.gif" alt="Tokenomics GIF" />
+        <p>Tokenomics and the overall success of $BUILT are built on transparency, community-driven growth, and sustainability. Check out our tokenomics and roadmap for more info!</p>
+        <img src="https://imagizer.imageshack.com/img924/7305/g2bVbM.jpg" alt="Tokenomics" />
       </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="footer">
-      <p>All rights reserved by BuiltDifferentCTO.</p>
-      <p>powered by <a href="https://x.com/weBgen_graphics" target="_blank">webGen</a></p>
     </div>
   </div>
 
-  <!-- Script per copiare il CA negli appunti -->
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>All rights reserved by BuiltDifferentCTO &copy; 2025 | Powered by webGen</p>
+  </div>
+
+  <!-- Script per copiare l'indirizzo CA -->
   <script>
     function copyCA() {
-      const caText = document.getElementById("ca-text").textContent;
-      navigator.clipboard.writeText(caText)
-        .then(() => {
-          alert("Indirizzo copiato!");
-        })
-        .catch(err => {
-          alert("Errore nella copia: " + err);
-        });
+      const caText = document.getElementById('ca-text');
+      const range = document.createRange();
+      range.selectNode(caText);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand('copy');
+      alert('Address copied to clipboard!');
     }
   </script>
 </body>
