@@ -63,6 +63,13 @@
       overflow-y: auto;
       text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
       letter-spacing: 1px;
+      opacity: 0; /* Nasconde il sito inizialmente */
+      transition: opacity 2s ease-in-out; /* Effetto di transizione */
+    }
+
+    /* Mostra il sito dopo il preloader */
+    body.loaded {
+      opacity: 1;
     }
 
     /* Resto del tuo codice CSS */
@@ -375,9 +382,10 @@
       });
     }
 
-    // Rimuovi il preloader dopo 5 secondi
+    // Rimuovi il preloader dopo 5 secondi e mostra il sito con transizione
     setTimeout(function () {
       document.getElementById('preloader').style.display = 'none';
+      document.body.classList.add('loaded');
     }, 5000); // 5 secondi
   </script>
 </body>
