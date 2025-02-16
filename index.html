@@ -63,13 +63,6 @@
       overflow-y: auto;
       text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
       letter-spacing: 1px;
-      opacity: 0; /* Nasconde il sito inizialmente */
-      transition: opacity 2s ease-in-out; /* Effetto di transizione */
-    }
-
-    /* Mostra il sito dopo il preloader */
-    body.loaded {
-      opacity: 1;
     }
 
     /* Resto del tuo codice CSS */
@@ -327,39 +320,44 @@
     <a href="https://x.com/ctobuilt?s=21" target="_blank"><i class="fab fa-x"></i></a>
     <a href="https://www.instagram.com/p/DF6lU2So37L/?igsh=cTFxMmEycWRncWU=" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="http://www.tiktok.com/@builtdifferentcto" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://t.me/BUILTportal" target="_blank"><i class="fab fa-telegram"></i></a>
+    <a href="https://dexscreener.com/solana/EPSosNPZfxrrJoyaUDyziyrP6rNUYHb1fdxYLyN7ySzq" target="_blank"><i class="fas fa-chart-line"></i></a>
   </div>
 
+  <!-- Testo CA copiabile -->
   <div class="social-text">
-    <p>Stay updated with the latest project news and updates.</p>
+    <p id="ca-text" onclick="copyCA()">CA: vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</p>
   </div>
 
-  <!-- SEZIONE ABOUT -->
-  <div id="about" class="section">
-    <h2>ABOUT</h2>
-    <div class="text-box">
-      <h3>The Project</h3>
-      <p>The project is a revolutionary new ecosystem on Solana. It brings together Pre-sale investors, Community influencers, and Big-time B2B influencers.</p>
-    </div>
-  </div>
-
-  <!-- SEZIONE HOW TO BUY -->
-  <div id="how-to-buy" class="section">
-    <h2>HOW TO BUY</h2>
-    <div class="how-to-buy-box">
-      <div>
-        <p>Step 1: Download the Phantom wallet</p>
-      </div>
-      <div>
-        <p>Step 2: Buy SOL from your local exchange</p>
+  <!-- CONTENUTO PRINCIPALE -->
+  <div class="container" id="main-content">
+    <!-- SEZIONE ABOUT -->
+    <div id="about" class="section">
+      <h2>ABOUT</h2>
+      <div class="text-box">
+        <p>The project is a revolutionary new ecosystem on Solana. It brings together Pre-sale investors, Community influencers, and Big-time B2B influencers.</p>
       </div>
     </div>
-  </div>
 
-  <!-- SEZIONE TOKENOMICS -->
-  <div id="tokenomics" class="section">
-    <h2>TOKENOMICS</h2>
-    <div class="tokenomics-box">
-      <p>Coming Soon</p>
+    <!-- SEZIONE HOW TO BUY -->
+    <div id="how-to-buy" class="section">
+      <h2>HOW TO BUY</h2>
+      <div class="how-to-buy-box">
+        <div>
+          <p>Step 1: Download the Phantom wallet</p>
+        </div>
+        <div>
+          <p>Step 2: Buy SOL from your local exchange</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEZIONE TOKENOMICS -->
+    <div id="tokenomics" class="section">
+      <h2>TOKENOMICS</h2>
+      <div class="tokenomics-box">
+        <p>Coming Soon</p>
+      </div>
     </div>
   </div>
 
@@ -377,10 +375,9 @@
       });
     }
 
-    // Rimuovi il preloader dopo 5 secondi e mostra il sito con transizione
+    // Rimuovi il preloader dopo 5 secondi
     setTimeout(function () {
       document.getElementById('preloader').style.display = 'none';
-      document.body.classList.add('loaded');
     }, 5000); // 5 secondi
   </script>
 </body>
