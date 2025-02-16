@@ -14,43 +14,6 @@
       padding: 0;
       box-sizing: border-box;
     }
-
-    /* Preloader Styles */
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: #000;
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 1;
-      transition: opacity 1s ease-out;
-    }
-    #preloader img {
-      width: 150px;
-      height: 150px;
-      animation: rotateEffect 5s ease-in-out forwards;
-    }
-
-    @keyframes rotateEffect {
-      0% {
-        transform: rotate(0deg) scale(1);
-        opacity: 1;
-      }
-      50% {
-        transform: rotate(180deg) scale(1.1);
-        opacity: 0.8;
-      }
-      100% {
-        transform: rotate(360deg) scale(1);
-        opacity: 0;
-      }
-    }
-
     body {
       background-image: url('https://imagizer.imageshack.com/img923/9535/9Cnumn.jpg');
       background-size: 150%;
@@ -64,8 +27,6 @@
       text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
       letter-spacing: 1px;
     }
-
-    /* Resto del tuo codice CSS */
     .menu {
       width: 100%;
       background-color: #111;
@@ -92,6 +53,7 @@
       margin-top: 80px;
       position: relative;
     }
+    /* Social Buttons sotto il banner */
     .social-buttons {
       display: flex;
       justify-content: center;
@@ -116,16 +78,17 @@
       background-color: white;
       color: #111;
     }
+    /* Testo CA copiabile con incorniciatura e dimensione ridotta */
     .social-text {
       text-align: center;
       margin-bottom: 20px;
     }
     #ca-text {
-      font-size: 1.5rem;
+      font-size: 1.5rem; /* dimensione ridotta */
       color: white;
       cursor: pointer;
       user-select: none;
-      border: 2px solid white;
+      border: 2px solid white; /* incorniciatura */
       display: inline-block;
       padding: 5px 10px;
       border-radius: 5px;
@@ -219,6 +182,7 @@
       margin-left: auto;
       margin-right: auto;
     }
+    /* Footer */
     .footer {
       background-color: #111;
       padding: 20px;
@@ -231,6 +195,7 @@
       color: white;
       text-decoration: none;
     }
+    /* Media Queries per la Responsività */
     @media (max-width: 768px) {
       .menu a {
         font-size: 1rem;
@@ -289,6 +254,7 @@
       .tokenomics-box {
         font-size: 1.5rem;
       }
+      /* Ulteriore riduzione del font per il testo CA sui dispositivi molto piccoli */
       #ca-text {
         font-size: 1rem;
       }
@@ -299,11 +265,6 @@
   </style>
 </head>
 <body>
-  <!-- Preloader -->
-  <div id="preloader">
-    <img src="https://imagizer.imageshack.com/img923/1359/SCg4hm.jpg" alt="Preloader Image" />
-  </div>
-
   <!-- MENU -->
   <div class="menu">
     <a href="#about">$BUILT</a>
@@ -335,20 +296,34 @@
     <div id="about" class="section">
       <h2>ABOUT</h2>
       <div class="text-box">
-        <p>The project is a revolutionary new ecosystem on Solana. It brings together Pre-sale investors, Community influencers, and Big-time B2B influencers.</p>
+        <p>COMMUNITY TAKEOVER – $BUILT DIFFERENT IS BACK!</p>
+        <p>They tried to stop us. They tried to shut us down. But we are DIFFERENT.</p>
+        <p>$BUILT DIFFERENT wasn’t just a memecoin—it was a mentality. We started with fire in our veins, backed by major names like Davinci (buy 1$ of Bitcoin) and a community that believed in our vision. Then came the rug… but instead of staying down, we got back up. Why? Because we are built different.</p>
+        <p>Now it’s our turn. The community takes control. Our mission? To bring $BUILT DIFFERENT where it was always meant to be. No looking back, only forward.</p>
+        <p>No corrupt devs. Only united holders. No false promises. Only actions. No fear. Only determination.</p>
+        <p>If you’re here, it means you still believe in this vision. Let’s take back what’s ours.</p>
+        <p>Join the movement. Spread the revolution. Show the world we are truly DIFFERENT.</p>
       </div>
     </div>
 
     <!-- SEZIONE HOW TO BUY -->
-    <div id="how-to-buy" class="section">
-      <h2>HOW TO BUY</h2>
+    <div id="how-to-buy" class="section" style="margin-top: 120px;">
+      <h2>How to Buy</h2>
       <div class="how-to-buy-box">
         <div>
-          <p>Step 1: Download the Phantom wallet</p>
+          <h3>Download Wallet</h3>
+          <p>Download a Solana wallet, such as Phantom, which we highly recommend. You can easily install it from your device’s app store or as a Chrome extension for desktop users.</p>
         </div>
         <div>
-          <p>Step 2: Buy SOL from your local exchange</p>
+          <h3>Add Solana</h3>
+          <p>Obtain Solana directly through the Phantom wallet, or alternatively, transfer Solana to your new wallet from an exchange.</p>
         </div>
+      </div>
+
+      <!-- SEZIONE SWAP INFO -->
+      <div class="swap-info">
+        <h3>Swap SOL For $BUILT</h3>
+        <p>Visit decentralized exchanges (DEXs) like Raydium, and paste the $BUILT contract address provided on this website to swap your SOL for $BUILT. Alternatively, click the button below.</p>
       </div>
     </div>
 
@@ -356,29 +331,30 @@
     <div id="tokenomics" class="section">
       <h2>TOKENOMICS</h2>
       <div class="tokenomics-box">
-        <p>Coming Soon</p>
+        <p>1,000,000,000 $BUILT</p>
+        <img src="https://imagizer.imageshack.com/img923/4705/8vTFg2.gif" alt="Tokenomics GIF" />
       </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>All rights reserved by BuiltDifferentCTO.</p>
+      <p>powered by <a href="https://x.com/weBgen_graphics" target="_blank">webGen</a></p>
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    <p>&copy; 2025 All rights reserved by BuiltDifferentCTO.</p>
-  </div>
-
+  <!-- Script per copiare il CA negli appunti -->
   <script>
-    // Funzione per copiare l'indirizzo CA
     function copyCA() {
-      const text = document.getElementById('ca-text').innerText;
-      navigator.clipboard.writeText(text).then(() => {
-        alert('Address copied to clipboard!');
-      });
+      const caText = document.getElementById("ca-text").textContent;
+      navigator.clipboard.writeText(caText)
+        .then(() => {
+          alert("Indirizzo copiato!");
+        })
+        .catch(err => {
+          alert("Errore nella copia: " + err);
+        });
     }
-
-    // Rimuovi il preloader dopo 5 secondi
-    setTimeout(function () {
-      document.getElementById('preloader').style.display = 'none';
-    }, 5000); // 5 secondi
   </script>
 </body>
 </html>
