@@ -35,25 +35,28 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #000;
+      background-color: rgba(0, 0, 0, 0.8);
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 10000;
-      transition: opacity 1s ease-out;
+      z-index: 9999;
     }
 
-    #preloader img {
-      width: 150px; /* Cambia le dimensioni dell'immagine del preloader */
+    #preloader .spinner {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 2s linear infinite;
     }
 
-    /* Nascondi il sito inizialmente */
-    #main-content {
-      display: none;
-      opacity: 0;
-      transition: opacity 1s ease-in;
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
+    /* MENU */
     .menu {
       width: 100%;
       background-color: #111;
@@ -292,9 +295,9 @@
   </style>
 </head>
 <body>
-  <!-- PRELOADER -->
+  <!-- Preloader -->
   <div id="preloader">
-    <img src="https://imagizer.imageshack.com/img923/1359/SCg4hm.jpg" alt="Loading..." />
+    <div class="spinner"></div>
   </div>
 
   <!-- MENU -->
@@ -319,28 +322,32 @@
 
   <!-- Testo CA copiabile -->
   <div class="social-text">
-    <p id="ca-text" onclick="copyCA()">CA: vsDLJBTQZTFcnvrosoA49YhWVVYvkTRf9hs2</p>
+    <p id="ca-text" onclick="copyCA()">CA: vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</p>
   </div>
 
-  <!-- Contenuto principale del sito -->
-  <div id="main-content">
+  <!-- CONTENUTO PRINCIPALE -->
+  <div class="container" id="main-content">
     <!-- SEZIONE ABOUT -->
     <div id="about" class="section">
-      <h2>About $BUILT</h2>
-      <div class="text-box">
-        <p>Welcome to Built Different – the revolutionary platform aiming to create a decentralized and transparent ecosystem with the community at its heart.</p>
-      </div>
+      <h2>ABOUT</h2>
+      <p>We believe in transparency and trust. <strong>$BUILT</strong> is a token that stands against rug pulls and scams. Built by the community, for the community. Join us and make a difference.</p>
     </div>
 
     <!-- SEZIONE HOW TO BUY -->
     <div id="how-to-buy" class="section">
-      <h2>How to Buy</h2>
+      <h2>HOW TO BUY</h2>
       <div class="how-to-buy-box">
         <div>
-          <p>Step 1: Connect your wallet (Phantom or Sollet)</p>
+          <h3>Step 1</h3>
+          <p>Connect your wallet and ensure you have SOL to trade.</p>
         </div>
         <div>
-          <p>Step 2: Swap your tokens on Raydium for $BUILT</p>
+          <h3>Step 2</h3>
+          <p>Select the token to swap for $BUILT.</p>
+        </div>
+        <div>
+          <h3>Step 3</h3>
+          <p>Confirm and enjoy the rewards of being part of the community.</p>
         </div>
       </div>
     </div>
@@ -349,34 +356,39 @@
     <div id="tokenomics" class="section">
       <h2>Tokenomics</h2>
       <div class="tokenomics-box">
-        <h3>Total Supply: 1,000,000,000 $BUILT</h3>
+        <p>Total Supply: 1,000,000,000</p>
+        <p>Liquidity: 40%</p>
+        <p>Community: 30%</p>
+        <p>Development: 20%</p>
+        <p>Marketing: 10%</p>
+        <img src="https://via.placeholder.com/400" alt="Tokenomics Diagram">
       </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="footer">
-      <p>All rights reserved by BuiltDifferentCTO.</p>
     </div>
   </div>
 
-  <script>
-    // Funzione per copiare il CA negli appunti
-    function copyCA() {
-      var copyText = document.getElementById("ca-text");
-      navigator.clipboard.writeText(copyText.innerText);
-    }
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>All rights reserved by BuiltDifferentCTO. Follow us on <a href="https://x.com/ctobuilt?s=21" target="_blank">Twitter</a>, <a href="https://www.instagram.com/p/DF6lU2So37L/?igsh=cTFxMmEycWRncWU=" target="_blank">Instagram</a>, and <a href="http://www.tiktok.com/@builtdifferentcto" target="_blank">TikTok</a>.</p>
+  </div>
 
-    // Funzione per nascondere il preloader e mostrare il contenuto dopo 5 secondi
-    window.onload = function () {
-      setTimeout(function () {
-        document.getElementById("preloader").style.opacity = "0"; // Svanire il preloader
-        setTimeout(function () {
-          document.getElementById("preloader").style.display = "none"; // Nascondi preloader
-          document.getElementById("main-content").style.display = "block"; // Mostra il contenuto
-          document.getElementById("main-content").style.opacity = "1"; // Aggiungi transizione di visibilità
-        }, 1000); // Tempo di transizione
-      }, 5000); // Durata del preloader (5 secondi)
-    };
+  <!-- Script per il preloader -->
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('preloader').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    });
+
+    // Funzione per copiare l'indirizzo CA
+    function copyCA() {
+      const caText = document.getElementById("ca-text");
+      const textArea = document.createElement("textarea");
+      textArea.value = caText.textContent;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textArea);
+      alert("CA Copied: " + caText.textContent);
+    }
   </script>
 </body>
 </html>
