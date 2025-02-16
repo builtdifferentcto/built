@@ -53,7 +53,7 @@
       margin-top: 80px;
       position: relative;
     }
-    /* Social Buttons sotto il banner */
+    /* Social Buttons sopra il footer */
     .social-buttons {
       display: flex;
       justify-content: center;
@@ -276,7 +276,7 @@
   <!-- SEZIONE BANNER -->
   <div class="banner-section"></div>
 
-  <!-- Social Buttons sotto il banner -->
+  <!-- Social Buttons sopra il footer -->
   <div class="social-buttons">
     <a href="https://x.com/ctobuilt?s=21" target="_blank"><i class="fab fa-x"></i></a>
     <a href="https://www.instagram.com/p/DF6lU2So37L/?igsh=cTFxMmEycWRncWU=" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -285,85 +285,40 @@
     <a href="https://dexscreener.com/solana/EPSosNPZfxrrJoyaUDyziyrP6rNUYHb1fdxYLyN7ySzq" target="_blank"><i class="fas fa-chart-line"></i></a>
   </div>
 
-  <!-- Testo CA copiabile -->
-  <div class="social-text">
-    <p id="ca-text" onclick="copyCA()">CA: vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</p>
+  <!-- SEZIONE INFORMATIVA -->
+  <div class="section" id="about">
+    <h2>About $BUILT</h2>
+    <p>$BUILT is a community-driven meme coin dedicated to standing against scams and rug pulls.</p>
   </div>
 
-  <!-- CONTENUTO PRINCIPALE -->
-  <div class="container" id="main-content">
-    <!-- SEZIONE ABOUT -->
-    <div id="about" class="section">
-      <h2>ABOUT</h2>
-      <div class="text-box">
-        <p>COMMUNITY TAKEOVER – $BUILT DIFFERENT IS BACK!</p>
-        <p>They tried to stop us. They tried to shut us down. But we are DIFFERENT.</p>
-        <p>$BUILT DIFFERENT wasn’t just a memecoin—it was a mentality. We started with fire in our veins, backed by major names like Davinci (buy 1$ of Bitcoin) and a community that believed in our vision. Then came the rug… but instead of staying down, we got back up. Why? Because we are built different.</p>
-        <p>Now it’s our turn. The community takes control. Our mission? To bring $BUILT DIFFERENT where it was always meant to be. No looking back, only forward.</p>
-        <p>No corrupt devs. Only united holders. No false promises. Only actions. No fear. Only determination.</p>
-        <p>If you’re here, it means you still believe in this vision. Let’s take back what’s ours.</p>
-        <p>Join the movement. Spread the revolution. Show the world we are truly DIFFERENT.</p>
+  <!-- SEZIONE HOW TO BUY -->
+  <div class="section" id="how-to-buy">
+    <h2>How to Buy $BUILT</h2>
+    <div class="how-to-buy-box">
+      <div>
+        <h3>Step 1: Connect Wallet</h3>
+        <p>Connect your wallet to the Solana network.</p>
       </div>
-    </div>
-
-    <!-- SEZIONE HOW TO BUY -->
-    <div id="how-to-buy" class="section" style="margin-top: 120px;">
-      <h2>How to Buy</h2>
-      <div class="how-to-buy-box">
-        <div>
-          <h3>Download Wallet</h3>
-          <p>Download a Solana wallet, such as Phantom, which we highly recommend. You can easily install it from your device’s app store or as a Chrome extension for desktop users.</p>
-        </div>
-        <div>
-          <h3>Add Solana</h3>
-          <p>Obtain Solana directly through the Phantom wallet, or alternatively, transfer Solana to your new wallet from an exchange.</p>
-        </div>
+      <div>
+        <h3>Step 2: Buy $BUILT</h3>
+        <p>Use your tokens to buy $BUILT via Raydium or a supported exchange.</p>
       </div>
-
-      <!-- SEZIONE SWAP INFO -->
-      <div class="swap-info">
-        <h3>Swap SOL For $BUILT</h3>
-        <p>Visit decentralized exchanges (DEXs) like Raydium, and paste the $BUILT contract address provided on this website to swap your SOL for $BUILT. Alternatively, click the button below.</p>
-      </div>
-    </div>
-
-    <!-- SEZIONE TOKENOMICS -->
-    <div id="tokenomics" class="section">
-      <h2>TOKENOMICS</h2>
-      <div class="tokenomics-box">
-        <p>1,000,000,000 $BUILT</p>
-        <img src="https://imagizer.imageshack.com/img923/4705/8vTFg2.gif" alt="Tokenomics GIF" />
-      </div>
-    </div>
-    
-<!-- Social Buttons sopra il footer -->
-<div class="social-buttons">
-  <a href="https://x.com/ctobuilt?s=21" target="_blank"><i class="fab fa-x"></i></a>
-  <a href="https://www.instagram.com/p/DF6lU2So37L/?igsh=cTFxMmEycWRncWU=" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="http://www.tiktok.com/@builtdifferentcto" target="_blank"><i class="fab fa-tiktok"></i></a>
-  <a href="https://t.me/BUILTportal" target="_blank"><i class="fab fa-telegram"></i></a>
-  <a href="https://dexscreener.com/solana/EPSosNPZfxrrJoyaUDyziyrP6rNUYHb1fdxYLyN7ySzq" target="_blank"><i class="fas fa-chart-line"></i></a>
-</div>
-
-    <!-- FOOTER -->
-    <div class="footer">
-      <p>All rights reserved by BuiltDifferentCTO.</p>
-      <p>powered by <a href="https://x.com/weBgen_graphics" target="_blank">webGen</a></p>
     </div>
   </div>
 
-  <!-- Script per copiare il CA negli appunti -->
-  <script>
-    function copyCA() {
-      const caText = document.getElementById("ca-text").textContent;
-      navigator.clipboard.writeText(caText)
-        .then(() => {
-          alert("Indirizzo copiato!");
-        })
-        .catch(err => {
-          alert("Errore nella copia: " + err);
-        });
-    }
-  </script>
+  <!-- SEZIONE TOKENOMICS -->
+  <div class="section" id="tokenomics">
+    <h2>Tokenomics</h2>
+    <div class="tokenomics-box">
+      <p>50% Supply for Presale</p>
+      <img src="https://imagizer.imageshack.com/img922/3389/JZ1yz8.jpg" alt="Tokenomics" />
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>All rights reserved by BuiltDifferentCTO</p>
+    <p>Powered by webGen</p>
+  </div>
 </body>
 </html>
