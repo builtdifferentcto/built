@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>$BUILT</title>
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <!-- Font Awesome per le icone -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -50,7 +53,7 @@
       margin-top: 80px;
       position: relative;
     }
-    /* Social buttons under the banner */
+    /* Social Buttons sotto il banner */
     .social-buttons {
       display: flex;
       justify-content: center;
@@ -65,8 +68,11 @@
       text-decoration: none;
       border: 2px solid white;
       border-radius: 5px;
-      font-size: 1.1rem;
-      transition: background-color 0.3s;
+      font-size: 2rem;
+      transition: background-color 0.3s, color 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .social-buttons a:hover {
       background-color: white;
@@ -138,9 +144,7 @@
       width: 80%;
       font-size: 1.3rem;
       text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 40px;
+      margin: 40px auto 0 auto;
     }
     .text-box ul {
       list-style: none;
@@ -166,9 +170,7 @@
       width: 80%;
       font-size: 4rem;
       text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 40px;
+      margin: 40px auto 0 auto;
     }
     .tokenomics-box img {
       margin-top: 20px;
@@ -179,7 +181,7 @@
       margin-right: auto;
     }
 
-    /* Media Queries for Responsiveness */
+    /* Media Queries per la Responsività */
     @media (max-width: 768px) {
       .menu a {
         font-size: 1rem;
@@ -225,6 +227,14 @@
       .section h2 {
         font-size: 2rem;
       }
+      .social-buttons {
+        gap: 10px;
+        margin: 15px 0;
+      }
+      .social-buttons a {
+        font-size: 1.5rem;
+        padding: 8px 16px;
+      }
       .how-to-buy-box {
         gap: 10px;
       }
@@ -253,10 +263,10 @@
   
   <!-- Social Buttons sotto il banner -->
   <div class="social-buttons">
-    <a href="https://x.com/ctobuilt?s=21" target="_blank">X</a>
-    <a href="https://www.instagram.com/p/DF6lU2So37L/?igsh=cTFxMmEycWRncWU=" target="_blank">INSTAGRAM</a>
-    <a href="http://www.tiktok.com/@builtdifferentcto" target="_blank">TIKTOK</a>
-    <a href="https://t.me/BUILTportal" target="_blank">TELEGRAM</a>
+    <a href="https://x.com/ctobuilt?s=21" target="_blank"><i class="fab fa-x"></i></a>
+    <a href="https://www.instagram.com/p/DF6lU2So37L/?igsh=cTFxMmEycWRncWU=" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="http://www.tiktok.com/@builtdifferentcto" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://t.me/BUILTportal" target="_blank"><i class="fab fa-telegram"></i></a>
   </div>
 
   <!-- CONTENUTO PRINCIPALE -->
