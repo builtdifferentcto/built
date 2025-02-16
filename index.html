@@ -54,14 +54,14 @@
       position: relative;
     }
     /* Social Buttons sopra il footer */
-    .social-buttons {
+    .social-buttons-footer {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 15px;
       margin: 20px 0;
     }
-    .social-buttons a {
+    .social-buttons-footer a {
       background-color: #111;
       color: white;
       padding: 10px 20px;
@@ -74,7 +74,7 @@
       align-items: center;
       justify-content: center;
     }
-    .social-buttons a:hover {
+    .social-buttons-footer a:hover {
       background-color: white;
       color: #111;
     }
@@ -236,11 +236,11 @@
       .section h2 {
         font-size: 2rem;
       }
-      .social-buttons {
+      .social-buttons-footer {
         gap: 10px;
         margin: 15px 0;
       }
-      .social-buttons a {
+      .social-buttons-footer a {
         font-size: 1.5rem;
         padding: 8px 16px;
       }
@@ -277,7 +277,7 @@
   <div class="banner-section"></div>
 
   <!-- Social Buttons sopra il footer -->
-  <div class="social-buttons">
+  <div class="social-buttons-footer">
     <a href="https://x.com/ctobuilt?s=21" target="_blank"><i class="fab fa-x"></i></a>
     <a href="https://www.instagram.com/p/DF6lU2So37L/?igsh=cTFxMmEycWRncWU=" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="http://www.tiktok.com/@builtdifferentcto" target="_blank"><i class="fab fa-tiktok"></i></a>
@@ -285,40 +285,67 @@
     <a href="https://dexscreener.com/solana/EPSosNPZfxrrJoyaUDyziyrP6rNUYHb1fdxYLyN7ySzq" target="_blank"><i class="fas fa-chart-line"></i></a>
   </div>
 
-  <!-- SEZIONE INFORMATIVA -->
-  <div class="section" id="about">
-    <h2>About $BUILT</h2>
-    <p>$BUILT is a community-driven meme coin dedicated to standing against scams and rug pulls.</p>
+  <!-- Testo CA copiabile -->
+  <div class="social-text">
+    <p id="ca-text" onclick="copyCA()">CA: vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</p>
   </div>
 
-  <!-- SEZIONE HOW TO BUY -->
-  <div class="section" id="how-to-buy">
-    <h2>How to Buy $BUILT</h2>
-    <div class="how-to-buy-box">
-      <div>
-        <h3>Step 1: Connect Wallet</h3>
-        <p>Connect your wallet to the Solana network.</p>
-      </div>
-      <div>
-        <h3>Step 2: Buy $BUILT</h3>
-        <p>Use your tokens to buy $BUILT via Raydium or a supported exchange.</p>
+  <!-- CONTENUTO PRINCIPALE -->
+  <div class="container" id="main-content">
+    <!-- SEZIONE ABOUT -->
+    <div id="about" class="section">
+      <h2>ABOUT</h2>
+      <div class="text-box">
+        <p>COMMUNITY TAKEOVER – $BUILT DIFFERENT IS BACK!</p>
+        <p>They tried to stop us. They tried to shut us down. But we are DIFFERENT.</p>
+        <p>$BUILT DIFFERENT wasn’t just a memecoin—it was a mentality. We’ve seen it all. We built from the ground up. And we’re not stopping now!</p>
+        <ul>
+          <li>Time to get on the train 🚂</li>
+          <li>Time to BUILD IT 📈</li>
+        </ul>
       </div>
     </div>
-  </div>
 
-  <!-- SEZIONE TOKENOMICS -->
-  <div class="section" id="tokenomics">
-    <h2>Tokenomics</h2>
-    <div class="tokenomics-box">
-      <p>50% Supply for Presale</p>
-      <img src="https://imagizer.imageshack.com/img922/3389/JZ1yz8.jpg" alt="Tokenomics" />
+    <!-- SEZIONE HOW TO BUY -->
+    <div id="how-to-buy" class="section">
+      <h2>How to Buy</h2>
+      <div class="how-to-buy-box">
+        <div>
+          <p>1. Buy SOL on your preferred platform.</p>
+          <p>2. Transfer to your wallet.</p>
+        </div>
+        <div>
+          <p>3. Swap SOL for $BUILT!</p>
+          <p>4. HODL and BUILD IT.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEZIONE TOKENOMICS -->
+    <div id="tokenomics" class="section">
+      <h2>Tokenomics</h2>
+      <div class="tokenomics-box">
+        <h3>Token Distribution</h3>
+        <img src="https://imagizer.imageshack.com/img924/1052/GDjs99.png" alt="Tokenomics Diagram" />
+      </div>
     </div>
   </div>
 
   <!-- FOOTER -->
   <div class="footer">
-    <p>All rights reserved by BuiltDifferentCTO</p>
-    <p>Powered by webGen</p>
+    <p>All rights reserved by BuiltDifferentCTO | Powered by webGen</p>
   </div>
+
+  <script>
+    function copyCA() {
+      const caText = document.getElementById("ca-text");
+      const range = document.createRange();
+      range.selectNode(caText);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      alert("Contract Address copied to clipboard!");
+    }
+  </script>
 </body>
 </html>
