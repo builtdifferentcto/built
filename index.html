@@ -15,8 +15,8 @@
       box-sizing: border-box;
     }
     body {
-      background-image: url('https://imagizer.imageshack.com/img923/8048/iBfSDb.jpg');
-      background-size: cover;
+      background-image: url('https://imagizer.imageshack.com/img923/9535/9Cnumn.jpg');
+      background-size: 150%;
       background-position: center;
       background-repeat: no-repeat;
       background-color: #000;
@@ -53,14 +53,15 @@
       margin-top: 80px;
       position: relative;
     }
-    .social-buttons-footer {
+    /* Social Buttons sotto il banner */
+    .social-buttons {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 15px;
       margin: 20px 0;
     }
-    .social-buttons-footer a {
+    .social-buttons a {
       background-color: #111;
       color: white;
       padding: 10px 20px;
@@ -73,16 +74,21 @@
       align-items: center;
       justify-content: center;
     }
-    .social-buttons-footer a:hover {
+    .social-buttons a:hover {
       background-color: white;
       color: #111;
     }
+    /* Testo CA copiabile con incorniciatura e dimensione ridotta */
+    .social-text {
+      text-align: center;
+      margin-bottom: 20px;
+    }
     #ca-text {
-      font-size: 1.5rem;
+      font-size: 1.5rem; /* dimensione ridotta */
       color: white;
       cursor: pointer;
       user-select: none;
-      border: 2px solid white;
+      border: 2px solid white; /* incorniciatura */
       display: inline-block;
       padding: 5px 10px;
       border-radius: 5px;
@@ -230,11 +236,11 @@
       .section h2 {
         font-size: 2rem;
       }
-      .social-buttons-footer {
+      .social-buttons {
         gap: 10px;
         margin: 15px 0;
       }
-      .social-buttons-footer a {
+      .social-buttons a {
         font-size: 1.5rem;
         padding: 8px 16px;
       }
@@ -248,6 +254,7 @@
       .tokenomics-box {
         font-size: 1.5rem;
       }
+      /* Ulteriore riduzione del font per il testo CA sui dispositivi molto piccoli */
       #ca-text {
         font-size: 1rem;
       }
@@ -269,6 +276,20 @@
   <!-- SEZIONE BANNER -->
   <div class="banner-section"></div>
 
+  <!-- Social Buttons sotto il banner -->
+  <div class="social-buttons">
+    <a href="https://x.com/ctobuilt?s=21" target="_blank"><i class="fab fa-x"></i></a>
+    <a href="https://www.instagram.com/p/DF6lU2So37L/?igsh=cTFxMmEycWRncWU=" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="http://www.tiktok.com/@builtdifferentcto" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://t.me/BUILTportal" target="_blank"><i class="fab fa-telegram"></i></a>
+    <a href="https://dexscreener.com/solana/EPSosNPZfxrrJoyaUDyziyrP6rNUYHb1fdxYLyN7ySzq" target="_blank"><i class="fas fa-chart-line"></i></a>
+  </div>
+
+  <!-- Testo CA copiabile -->
+  <div class="social-text">
+    <p id="ca-text" onclick="copyCA()">CA: vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</p>
+  </div>
+
   <!-- CONTENUTO PRINCIPALE -->
   <div class="container" id="main-content">
     <!-- SEZIONE ABOUT -->
@@ -277,65 +298,62 @@
       <div class="text-box">
         <p>COMMUNITY TAKEOVER – $BUILT DIFFERENT IS BACK!</p>
         <p>They tried to stop us. They tried to shut us down. But we are DIFFERENT.</p>
-        <p>$BUILT DIFFERENT wasn’t just a memecoin—it was a mentality. We’ve seen it all. We built from the ground up. And we’re not stopping now!</p>
-        <ul>
-          <li>Time to get on the train 🚂</li>
-          <li>Time to BUILD IT 📈</li>
-        </ul>
+        <p>$BUILT DIFFERENT wasn’t just a memecoin—it was a mentality. We started with fire in our veins, backed by major names like Davinci (buy 1$ of Bitcoin) and a community that believed in our vision. Then came the rug… but instead of staying down, we got back up. Why? Because we are built different.</p>
+        <p>Now it’s our turn. The community takes control. Our mission? To bring $BUILT DIFFERENT where it was always meant to be. No looking back, only forward.</p>
+        <p>No corrupt devs. Only united holders. No false promises. Only actions. No fear. Only determination.</p>
+        <p>If you’re here, it means you still believe in this vision. Let’s take back what’s ours.</p>
+        <p>Join the movement. Spread the revolution. Show the world we are truly DIFFERENT.</p>
       </div>
     </div>
 
     <!-- SEZIONE HOW TO BUY -->
-    <div id="how-to-buy" class="section">
+    <div id="how-to-buy" class="section" style="margin-top: 120px;">
       <h2>How to Buy</h2>
       <div class="how-to-buy-box">
         <div>
-          <p>1. Buy SOL on your preferred platform.</p>
-          <p>2. Transfer to your wallet.</p>
+          <h3>Download Wallet</h3>
+          <p>Download a Solana wallet, such as Phantom, which we highly recommend. You can easily install it from your device’s app store or as a Chrome extension for desktop users.</p>
         </div>
         <div>
-          <p>3. Swap SOL for $BUILT!</p>
-          <p>4. HODL and BUILD IT.</p>
+          <h3>Add Solana</h3>
+          <p>Obtain Solana directly through the Phantom wallet, or alternatively, transfer Solana to your new wallet from an exchange.</p>
         </div>
+      </div>
+
+      <!-- SEZIONE SWAP INFO -->
+      <div class="swap-info">
+        <h3>Swap SOL For $BUILT</h3>
+        <p>Visit decentralized exchanges (DEXs) like Raydium, and paste the $BUILT contract address provided on this website to swap your SOL for $BUILT. Alternatively, click the button below.</p>
       </div>
     </div>
 
     <!-- SEZIONE TOKENOMICS -->
     <div id="tokenomics" class="section">
-      <h2>Tokenomics</h2>
+      <h2>TOKENOMICS</h2>
       <div class="tokenomics-box">
-        <h3>Token Distribution</h3>
-        <img src="https://imagizer.imageshack.com/img924/1052/GDjs99.png" alt="Tokenomics Diagram" />
+        <p>1,000,000,000 $BUILT</p>
+        <img src="https://imagizer.imageshack.com/img923/4705/8vTFg2.gif" alt="Tokenomics GIF" />
       </div>
     </div>
 
-    <!-- SEZIONE SOCIAL BUTTONS -->
-    <div id="social-buttons" class="section">
-      <h2>Follow Us</h2>
-      <div class="social-buttons-footer">
-        <a href="https://x.com/ctobuilt?s=21" target="_blank"><i class="fab fa-x"></i></a>
-        <a href="https://www.instagram.com/p/DF6lU2So37L/?igsh=cTFxMmEycWRncWU=" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="http://www.tiktok.com/@builtdifferentcto" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://t.me/BUILTportal" target="_blank"><i class="fab fa-telegram"></i></a>
-        <a href="https://dexscreener.com/solana/EPSosNPZfxrrJoyaUDyziyrP6rNUYHb1fdxYLyN7ySzq" target="_blank"><i class="fas fa-chart-line"></i></a>
-      </div>
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>All rights reserved by BuiltDifferentCTO.</p>
+      <p>powered by <a href="https://x.com/weBgen_graphics" target="_blank">webGen</a></p>
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    <p>All rights reserved by BuiltDifferentCTO | Powered by webGen</p>
-  </div>
-
+  <!-- Script per copiare il CA negli appunti -->
   <script>
     function copyCA() {
-      const caText = document.getElementById("ca-text");
-      const range = document.createRange();
-      range.selectNode(caText);
-      window.getSelection().removeAllRanges();
-      window.getSelection().addRange(range);
-      document.execCommand("copy");
-      alert("Contract Address copied to clipboard!");
+      const caText = document.getElementById("ca-text").textContent;
+      navigator.clipboard.writeText(caText)
+        .then(() => {
+          alert("Indirizzo copiato!");
+        })
+        .catch(err => {
+          alert("Errore nella copia: " + err);
+        });
     }
   </script>
 </body>
