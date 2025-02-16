@@ -1,20 +1,246 @@
-<!-- SEZIONE HOW TO BUY -->
-<div id="how-to-buy" class="section">
-  <h2>How to Buy</h2>
-  <div class="how-to-buy-box">
-    <div>
-      <p>Step 1: Buy Solana</p>
-    </div>
-    <div>
-      <p>Step 2: Swap on Serum or Raydium for $BUILT</p>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$BUILT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(45deg, #1c1c1c, #a9a9a9);
+      background-size: 400% 400%;
+      animation: gradientShift 10s ease infinite;
+      color: white;
+      font-family: 'Bangers', cursive, Arial, sans-serif;
+      text-align: center;
+      overflow-y: auto;
+      text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+      letter-spacing: 1px;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 20px;
+    }
+    .logo {
+      width: 150px;
+      height: auto;
+    }
+    .title {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .socials {
+      display: flex;
+      gap: 15px;
+    }
+    .socials a {
+      color: white;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+    .main-image {
+      width: 100%;
+      height: auto;
+    }
+    .ca-section {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+    .ca-text {
+      background-color: #222;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .menu {
+      width: 100%;
+      background-color: #111;
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      text-align: center;
+      z-index: 1000;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+    }
+    .section {
+      padding: 80px 20px;
+      min-height: 100vh;
+      border: 3px solid white;
+      border-radius: 15px;
+      margin-top: 80px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    /* Ingrandiamo notevolmente i titoli di ogni sezione */
+    .section h2 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    .built-section {
+      width: 80%;
+      max-width: 600px;
+      padding: 20px;
+      border: 2px solid white;
+      margin: 20px auto;
+      text-align: center;
+      background-color: #1a1a1a;
+      border-radius: 15px;
+    }
+    .built-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      letter-spacing: 3px;
+    }
+    .footer {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1rem;
+    }
+    .how-to-buy-section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .how-to-buy-section img {
+      width: 300px;
+      height: auto;
+      border-radius: 15px;
+    }
+    .how-to-buy-content {
+      flex: 1;
+      text-align: left;
+      color: white;
+    }
+    .how-to-buy-item {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 2px solid #fff;
+      border-radius: 15px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .how-to-buy-item h3 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .how-to-buy-item p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+    .tokenomics-item {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 2px solid #fff;
+      border-radius: 15px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    /* Ingrandiamo notevolmente il testo nella sottosezione TOTAL SUPPLY */
+    .tokenomics-item p {
+      font-size: 3rem;
+    }
+  </style>
+  <script>
+    function copyToClipboard() {
+      const text = document.getElementById("ca-text").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Copied to clipboard: " + text);
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="menu">
+    <a href="#about">$BUILT</a>
+    <a href="#how-to-buy">How to Buy</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#faq">FAQ</a>
   </div>
-</div>
+  <div class="container">
+    <img src="logo.png" alt="$BUILT Logo" class="logo">
+    <div class="title">$BUILT<strong>DIFFERENT</strong></div>
+    <img src="https://imagizer.imageshack.com/img922/2915/neUdYj.jpg" alt="$BUILT Image" class="main-image">
+    
+    <div class="built-section">
+      <div class="built-title">$BUILT</div>
+      <p>Built Different CTO spearheaded a remarkable community takeover, steering CTO towards new heights. We are simply $BUILT different</p>
+    </div>
 
-<!-- SEZIONE TOKENOMICS -->
-<div id="tokenomics" class="section">
-  <h2>Tokenomics</h2>
-  <div class="tokenomics-box">
-    <p>Coming soon...</p>
+    <div class="ca-section">
+      <strong>CA:</strong>
+      <div id="ca-text" class="ca-text" onclick="copyToClipboard()">vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</div>
+    </div>
   </div>
-</div>
+
+  <div id="how-to-buy" class="section">
+    <h2>How to Buy</h2>
+    <div class="how-to-buy-section">
+      <img src="https://imagizer.imageshack.com/img923/9535/9Cnumn.jpg" alt="How to Buy" />
+      <div class="how-to-buy-content">
+        <div class="how-to-buy-item">
+          <h3>Download Wallet</h3>
+          <p>Download a Solana wallet, such as Phantom, which we highly recommend. You can easily install it from your device’s app store or as a Chrome extension for desktop users.</p>
+        </div>
+        <div class="how-to-buy-item">
+          <h3>Add Solana</h3>
+          <p>Obtain Solana directly through the Phantom wallet, or alternatively, transfer Solana to your new wallet from an exchange.</p>
+        </div>
+        <div class="how-to-buy-item">
+          <h3>Swap SOL For $BUILT</h3>
+          <p>Visit decentralized exchanges (DEXs) like Raydium, and paste the $BUILT contract address provided on this website to swap your SOL for $BUILT. Alternatively, click the button below.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tokenomics" class="section">
+    <h2>TOTAL SUPPLY</h2>
+    <div class="tokenomics-item">
+      <p>1.000.000.00 $BUILT</p>
+    </div>
+    <p>Details about the tokenomics of $BUILT.</p>
+  </div>
+
+  <div id="faq" class="section">
+    <h2>FAQ</h2>
+    <p>Frequently asked questions about $BUILT.</p>
+  </div>
+
+  <div class="footer">
+    <a href="https://www.instagram.com/p/DF6lU2So37L/?igsh=cTFxMmEycWRncWU=" target="_blank">Instagram</a>
+    <a href="https://x.com/ctobuilt?s=21" target="_blank">X</a>
+    <a href="http://www.tiktok.com/@builtdifferentcto" target="_blank">TikTok</a>
+  </div>
+</body>
+</html>
