@@ -33,6 +33,7 @@
       left: 0;
       text-align: center;
       z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     .menu a {
       color: white;
@@ -148,10 +149,59 @@
       margin-right: auto;
       margin-top: 40px;
     }
+
+    /* STILI FULL-RESPONSIVE */
+    @media screen and (max-width: 768px) {
+      .menu a {
+        font-size: 1rem;
+        margin: 0 10px;
+      }
+      .banner-section {
+        height: 250px;
+      }
+      .section h2 {
+        font-size: 2.5rem;
+      }
+      .how-to-buy-box div {
+        width: 90%;
+      }
+      .swap-info {
+        width: 90%;
+      }
+      .tokenomics-box {
+        width: 90%;
+        font-size: 2.5rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .menu {
+        padding: 10px 0;
+      }
+      .banner-section {
+        height: 200px;
+      }
+      .section h2 {
+        font-size: 2rem;
+      }
+      .how-to-buy-box {
+        flex-direction: column;
+      }
+      .how-to-buy-box div {
+        width: 100%;
+      }
+      .swap-info {
+        width: 100%;
+      }
+      .tokenomics-box {
+        width: 100%;
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
-  
+
   <!-- MENU -->
   <div class="menu">
     <a href="#about">$BUILT</a>
@@ -219,5 +269,6 @@
     <a href="https://x.com/ctobuilt?s=21" target="_blank">X</a>
     <a href="https://t.me/BUILTportal" target="_blank">Telegram</a>
   </div>
+
 </body>
 </html>
