@@ -12,9 +12,10 @@
       box-sizing: border-box;
     }
     body {
-      background: linear-gradient(45deg, #1c1c1c, #a9a9a9);
-      background-size: 400% 400%;
-      animation: gradientShift 10s ease infinite;
+      background-image: url('https://imagizer.imageshack.com/img923/9535/9Cnumn.jpg');
+      background-size: cover; /* Assicura che l'immagine copra tutta la pagina */
+      background-position: center;
+      background-repeat: no-repeat;
       color: white;
       font-family: 'Bangers', cursive, Arial, sans-serif;
       text-align: center;
@@ -54,20 +55,19 @@
       margin-top: 80px;
       position: relative;
     }
-    /* Linee orizzontali sotto il banner */
     .banner-section::before, .banner-section::after {
       content: '';
       position: absolute;
-      bottom: -10px; /* Posiziona le linee sotto l'immagine */
+      bottom: -10px;
       width: 100%;
-      height: 2px; /* Spessore della linea */
+      height: 2px;
       background-color: white;
     }
     .banner-section::before {
-      left: -100vw; /* Inizia a sinistra fuori dalla pagina */
+      left: -100vw;
     }
     .banner-section::after {
-      right: -100vw; /* Inizia a destra fuori dalla pagina */
+      right: -100vw;
     }
     .section {
       padding: 80px 20px;
@@ -91,7 +91,7 @@
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-      font-size: 1.5rem; /* Aumento dimensione font */
+      font-size: 1.5rem;
     }
     .footer {
       background-color: #111;
