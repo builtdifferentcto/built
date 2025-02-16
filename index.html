@@ -43,12 +43,34 @@
     .banner-section {
       width: 100%;
       height: 400px;
-      background-image: url('https://imagizer.imageshack.com/img922/2915/neUdYj.jpg');
+      background-image: url('https://imagizer.imageshack.com/img922/2849/tK5Fo0.jpg');
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       margin-top: 80px;
       position: relative;
+    }
+    /* Social buttons under the banner */
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .social-buttons a {
+      background-color: #111;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border: 2px solid white;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s;
+    }
+    .social-buttons a:hover {
+      background-color: white;
+      color: #111;
     }
     .section {
       padding: 80px 20px;
@@ -228,6 +250,14 @@
 
   <!-- SEZIONE BANNER -->
   <div class="banner-section"></div>
+  
+  <!-- Social Buttons sotto il banner -->
+  <div class="social-buttons">
+    <a href="https://x.com/ctobuilt?s=21" target="_blank">X</a>
+    <a href="https://www.instagram.com/p/DF6lU2So37L/?igsh=cTFxMmEycWRncWU=" target="_blank">INSTAGRAM</a>
+    <a href="http://www.tiktok.com/@builtdifferentcto" target="_blank">TIKTOK</a>
+    <a href="https://t.me/BUILTportal" target="_blank">TELEGRAM</a>
+  </div>
 
   <!-- CONTENUTO PRINCIPALE -->
   <div class="container" id="main-content">
@@ -272,7 +302,7 @@
       <h2>TOKENOMICS</h2>
       <div class="tokenomics-box">
         <p>1,000,000,000 $BUILT</p>
-        <img src="https://imageshack.com/i/pn8vTFg2g" alt="Tokenomics GIF">
+        <img src="https://imagizer.imageshack.com/img923/4705/8vTFg2.gif" alt="Tokenomics GIF">
       </div>
     </div>
 
