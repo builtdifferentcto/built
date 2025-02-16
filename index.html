@@ -47,7 +47,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      margin-top: 80px;
+      margin-top: 60px; /* Ridotto lo spazio sopra il banner */
       position: relative;
     }
     .section {
@@ -171,6 +171,7 @@
     }
     .address-box p {
       margin-bottom: 20px;
+      font-size: 1.3rem;
     }
     .copy-btn {
       background-color: #333;
@@ -185,7 +186,7 @@
     .copy-btn:hover {
       background-color: #555;
     }
-    /* Media Queries for Responsiveness */
+    /* Media Queries per ottimizzare per dispositivi mobili */
     @media (max-width: 768px) {
       .menu a {
         font-size: 1rem;
@@ -218,6 +219,9 @@
       .tokenomics-box {
         font-size: 2rem;
       }
+      .address-box p {
+        font-size: 1rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -240,6 +244,9 @@
       }
       .tokenomics-box {
         font-size: 1.5rem;
+      }
+      .address-box p {
+        font-size: 1rem;
       }
     }
   </style>
