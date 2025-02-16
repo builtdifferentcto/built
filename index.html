@@ -171,6 +171,7 @@
     }
     .address-box p {
       margin-bottom: 20px;
+      word-wrap: break-word; /* Assicura che il testo non esca dalla cornice */
     }
     .copy-btn {
       background-color: #333;
@@ -219,10 +220,10 @@
         font-size: 2rem;
       }
       .address-box p {
-        font-size: 1rem; /* Ottimizzato per dispositivi mobili */
+        font-size: 1.1rem; /* Ottimizzato per versioni mobili */
       }
       .copy-btn {
-        font-size: 0.9rem; /* Ottimizzato per dispositivi mobili */
+        font-size: 0.9rem; /* Ottimizzato per versioni mobili */
       }
     }
 
@@ -317,31 +318,29 @@
     <div id="tokenomics" class="section">
       <h2>TOKENOMICS</h2>
       <div class="tokenomics-box">
-        <p>1,000,000,000 $BUILT</p>
-        <img src="https://imageshack.com/i/pn8vTFg2g" alt="Tokenomics GIF">
+        <p>1,000,000,000 Total Supply</p>
+        <img src="https://media.discordapp.net/attachments/1107458791073950918/1107992562512445480/Afterlife_tokenomics.png?width=1440&height=636" alt="Tokenomics">
       </div>
     </div>
 
-    <!-- FOOTER -->
-    <div class="footer">
-      <p>Follow us on social media:</p>
-      <a href="http://www.tiktok.com/@builtdifferentcto" target="_blank">TikTok</a>
-      <a href="https://x.com/ctobuilt?s=21" target="_blank">X</a>
-      <a href="https://t.me/BUILTportal" target="_blank">Telegram</a>
-    </div>
   </div>
 
+  <!-- FOOTER -->
+  <div class="footer">
+    <a href="https://linktr.ee/BuiltDifferentCTO" target="_blank">Linktree</a>
+  </div>
+
+  <!-- SCRIPT -->
   <script>
     function copyToClipboard() {
-      const text = "vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump";
-      navigator.clipboard.writeText(text)
-        .then(() => {
-          alert('Address copied to clipboard!');
-        })
-        .catch(err => {
-          console.error('Error copying text: ', err);
-        });
+      var text = document.querySelector('.address-box p').innerText;
+      navigator.clipboard.writeText(text).then(function() {
+        alert('Address copied to clipboard');
+      }, function(err) {
+        console.error('Unable to copy text', err);
+      });
     }
   </script>
+
 </body>
 </html>
