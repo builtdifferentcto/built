@@ -195,56 +195,54 @@
     </div>
 
     <!-- SEZIONE HOW TO BUY -->
-    <div id="how-to-buy" class="section">
+    <div id="how-to-buy" class="section" style="margin-top: 120px;"> <!-- Aggiunto margine per distanziare -->
       <h2>How to Buy</h2>
       <div class="how-to-buy-box">
         <div>
           <h3>Download Wallet</h3>
-          <p>Download a Solana wallet, such as Phantom or Sollet, and create an account.</p>
+          <p>Download a Solana wallet, such as Phantom, which we highly recommend. You can easily install it from your device’s app store or as a Chrome extension for desktop users.</p>
         </div>
         <div>
-          <h3>Buy Solana</h3>
-          <p>Buy some Solana (SOL) on an exchange like Binance or Coinbase, and transfer it to your wallet.</p>
+          <h3>Add Solana</h3>
+          <p>Obtain Solana directly through the Phantom wallet, or alternatively, transfer Solana to your new wallet from an exchange.</p>
         </div>
       </div>
-      <div class="how-to-buy-box">
-        <div>
-          <h3>Connect Wallet</h3>
-          <p>Connect your Solana wallet to the platform.</p>
-        </div>
-        <div>
-          <h3>Swap for $BUILT</h3>
-          <p>Swap your SOL for $BUILT on the exchange.</p>
-        </div>
+
+      <!-- SEZIONE SWAP INFO -->
+      <div class="swap-info">
+        <h3>Swap SOL For $BUILT</h3>
+        <p>Visit decentralized exchanges (DEXs) like Raydium, and paste the $BUILT contract address provided on this website to swap your SOL for $BUILT. Alternatively, click the button below.</p>
       </div>
 
       <!-- SEZIONE CA ADDRESS -->
       <div class="ca-address">
-        <h3>CA: vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</h3>
+        <h3><a href="javascript:void(0);" onclick="copyToClipboard()">CA: vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</a></h3>
         <input type="text" id="ca-address" value="vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump" readonly>
-        <button onclick="copyToClipboard()">Copy Address</button>
       </div>
-
     </div>
 
     <!-- SEZIONE TOKENOMICS -->
     <div id="tokenomics" class="section">
       <h2>TOKENOMICS</h2>
       <div class="tokenomics-box">
-        <p>1,000,000,000 $BUILT</p>
+        <p>Token Distribution</p>
+        <ul>
+          <li>10% for the community</li>
+          <li>15% for liquidity</li>
+          <li>20% for marketing</li>
+          <li>10% for development</li>
+          <li>45% for staking</li>
+        </ul>
       </div>
     </div>
 
-    <div id="faq" class="section">
-      <h2>FAQ</h2>
-      <p>Frequently asked questions about $BUILT.</p>
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>Follow us on social media:</p>
+      <a href="#">Twitter</a>
+      <a href="#">Telegram</a>
+      <a href="#">Discord</a>
     </div>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    <a href="https://www.instagram.com/p/DF6lU2So37L/?igsh=cTFxMmEycWRncWU=" target="_blank">Instagram</a>
-    <a href="https://x.com/ctobuilt?s=21" target="_blank">X</a>
   </div>
 
   <script>
@@ -256,5 +254,6 @@
       alert("Address copied to clipboard: " + copyText.value);
     }
   </script>
+
 </body>
 </html>
