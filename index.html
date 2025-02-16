@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$BUILT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(45deg, #1c1c1c, #a9a9a9);
+      background-size: 400% 400%;
+      animation: gradientShift 10s ease infinite;
+      color: white;
+      font-family: 'Bangers', cursive, Arial, sans-serif;
+      text-align: center;
+      overflow-y: auto;
+      text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+      letter-spacing: 1px;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .menu {
+      width: 100%;
+      background-color: #111;
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      text-align: center;
+      z-index: 1000;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+    }
+    .section {
+      padding: 80px 20px;
+      min-height: 100vh;
+      border: 3px solid white;
+      border-radius: 15px;
+      margin-top: 80px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .section h2 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    .footer {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- MENU -->
+  <div class="menu">
+    <a href="#about">$BUILT</a>
+    <a href="#how-to-buy">How to Buy</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#faq">FAQ</a>
+  </div>
+
+  <!-- CONTENUTO PRINCIPALE -->
+  <div class="container" id="main-content">
+    <h1>Welcome to $BUILT DIFFERENT</h1>
+    
+    <div id="about" class="section">
+      <h2>ABOUT</h2>
+      <p>🚀 COMMUNITY TAKEOVER – $BUILT DIFFERENT IS BACK! 🚀</p>
+      <p>They tried to stop us. They tried to shut us down. But we are DIFFERENT.</p>
+      <p>$BUILT DIFFERENT wasn’t just a memecoin—it was a mentality...</p>
+    </div>
+
+    <div id="how-to-buy" class="section">
+      <h2>How to Buy</h2>
+      <p>Instructions on how to buy $BUILT.</p>
+    </div>
+
+    <div id="tokenomics" class="section">
+      <h2>TOKENOMICS</h2>
+      <p>1,000,000,000 $BUILT</p>
+    </div>
+
+    <div id="faq" class="section">
+      <h2>FAQ</h2>
+      <p>Frequently asked questions about $BUILT.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <a href="https://www.instagram.com/p/DF6lU2So37L/?igsh=cTFxMmEycWRncWU=" target="_blank">Instagram</a>
+    <a href="https://x.com/ctobuilt?s=21" target="_blank">X</a>
+    <a href="http://www.tiktok.com/@builtdifferentcto" target="_blank">TikTok</a>
+  </div>
+
+</body>
+</html>
