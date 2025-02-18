@@ -405,14 +405,63 @@
         width: 100%;
         height: 315px;
     }
+<style>
+    #toggleVideo {
+        background-color: black;
+        color: white;
+        font-family: 'Bangers', sans-serif;
+        font-size: 24px;
+        border: 2px solid white;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        display: block;
+        margin: 20px auto;
+    }
+
+    #toggleVideo:hover {
+        background-color: white;
+        color: black;
+    }
+
+    #videoContainer {
+        display: none;
+        overflow: hidden;
+        text-align: center;
+        margin-top: 20px;
+        transition: all 0.5s ease-in-out;
+        max-height: 0;
+    }
+
+    #videoWrapper {
+        position: relative;
+        width: 100%;
+        max-width: 560px;
+        margin: auto;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #videoPlayer {
+        width: 100%;
+        height: 315px;
+        display: none; /* Nasconde il video all'inizio */
+    }
+
+    /* Media queries per mobile */
+    @media only screen and (max-width: 768px) {
+        #toggleVideo {
+            font-size: 18px; /* Riduce la dimensione del testo sui dispositivi mobili */
+        }
+    }
 </style>
 
 <button id="toggleVideo">WATCH VIDEO</button>
 
 <div id="videoContainer">
     <div id="videoWrapper">
+        <!-- Il video è caricato solo dopo il clic -->
         <iframe id="videoPlayer" 
-            src="https://www.youtube.com/embed/4z-TgSMCUK8?rel=0&playsinline=1" 
+            data-src="https://www.youtube.com/embed/4z-TgSMCUK8?rel=0&playsinline=1&autoplay=1" 
             title="YouTube video player" 
             frameborder="0" 
             allow="autoplay; encrypted-media; picture-in-picture" 
@@ -429,19 +478,23 @@
 
         toggleButton.addEventListener("click", function () {
             if (videoContainer.style.display === "none" || videoContainer.style.display === "") {
-                videoContainer.style.display = "block"; // Mostra il video
-                videoContainer.style.maxHeight = "500px"; // Espande il video con animazione
-                videoPlayer.src += "&autoplay=1"; // Avvia il video
+                videoContainer.style.display = "block"; // Mostra il contenitore del video
+                videoContainer.style.maxHeight = "500px"; // Espande il video
+                videoPlayer.style.display = "block"; // Mostra l'iframe
+                // Carica il video solo quando l'utente fa clic
+                videoPlayer.src = videoPlayer.getAttribute("data-src");
             } else {
-                videoContainer.style.maxHeight = "0"; // Ritira il video con animazione
+                videoContainer.style.maxHeight = "0"; // Ritira il video
                 setTimeout(function() {
-                    videoContainer.style.display = "none"; // Nasconde il video completamente
-                    videoPlayer.src = videoPlayer.src.split("&autoplay=1")[0]; // Ferma il video
-                }, 500); // Aspetta che l'animazione sia finita
+                    videoContainer.style.display = "none"; // Nasconde il video
+                    videoPlayer.src = ""; // Ferma il video
+                    videoPlayer.style.display = "none"; // Nasconde l'iframe
+                }, 500);
             }
         });
     });
 </script>
+
 
 
   <!-- CONTENUTO PRINCIPALE -->
