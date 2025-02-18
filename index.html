@@ -646,47 +646,68 @@
     }
 </style>
 
-<!-- Bottone per aprire il video -->
-<button id="toggleVideo">WATCH VIDEO</button>
+<style>
+    /* Stili per il bottone */
+    #toggleVideo {
+        background-color: black;
+        color: white;
+        font-family: 'Bangers', sans-serif;
+        font-size: 24px;
+        border: 2px solid white;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        display: block;
+        margin: 20px auto;
+    }
+
+    #toggleVideo:hover {
+        background-color: white;
+        color: black;
+    }
+
+    /* Stili per il contenitore del video */
+    #videoContainer {
+        width: 100%;
+        max-width: 900px;
+        margin: 20px auto;
+        position: relative;
+        border: 5px solid white;  /* Bordo bianco attorno al video */
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;  /* Angoli arrotondati */
+        background-color: black;  /* Sfondo nero dietro il video */
+    }
+
+    #videoContainer iframe {
+        width: 100%;
+        height: 500px;
+        border: none;
+        border-radius: 8px;  /* Bordo arrotondato anche per il video */
+    }
+
+    /* Media queries per mobile */
+    @media only screen and (max-width: 768px) {
+        #toggleVideo {
+            font-size: 18px;
+        }
+
+        #videoContainer iframe {
+            height: 300px;
+        }
+    }
+</style>
 
 <!-- Contenitore del video -->
 <div id="videoContainer">
-    <button id="closeVideo">X</button>
     <iframe id="videoIframe" 
-            src="https://www.youtube.com/embed/4z-TgSMCUK8?rel=0&autoplay=0&playsinline=1" 
+            src="https://www.youtube.com/embed/4z-TgSMCUK8?autoplay=1&rel=0&playsinline=1" 
             title="YouTube video player" 
             allow="autoplay; encrypted-media; picture-in-picture" 
             allowfullscreen>
     </iframe>
 </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var videoButton = document.getElementById("toggleVideo");
-        var videoContainer = document.getElementById("videoContainer");
-        var closeButton = document.getElementById("closeVideo");
-        var iframe = document.getElementById("videoIframe");
-
-        // Funzione per aprire e chiudere il video
-        videoButton.onclick = function() {
-            if (videoContainer.style.display === "block") {
-                // Se il video è già visibile, chiudilo
-                videoContainer.style.display = "none";
-                iframe.src = ""; // Ferma il video quando chiudi
-            } else {
-                // Se il video non è visibile, aprilo e carica il video
-                videoContainer.style.display = "block";
-                iframe.src = "https://www.youtube.com/embed/4z-TgSMCUK8?autoplay=1&rel=0&playsinline=1"; // Avvia il video
-            }
-        };
-
-        // Funzione per chiudere il video
-        closeButton.onclick = function() {
-            videoContainer.style.display = "none";
-            iframe.src = ""; // Ferma il video
-        };
-    });
-</script>
 
 
 
