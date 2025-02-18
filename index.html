@@ -352,32 +352,69 @@
 </nav>
 
 <style>
-    nav {
-        display: flex;
-        justify-content: center; /* Centers the menu horizontally */
-        align-items: center; /* Vertical alignment */
-        padding: 10px 20px;
-        background-color: #000; /* Background color */
-    }
+   /* Generale per il menu */
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Hamburger (anche se non sarà visibile, lo lasciamo per il futuro se volessimo aggiungere qualche funzionalità mobile) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
     nav ul {
-        list-style: none; /* Removes the bullet points from list items */
-        margin: 0;
-        padding: 0;
-        display: flex;
+        display: flex; /* Mantieni il menu orizzontale */
+        justify-content: center; /* Centra gli elementi del menu */
     }
+
     nav ul li {
-        margin-right: 20px; /* Space between menu items */
+        padding: 10px 15px; /* Riduci un po' il padding sui dispositivi mobili */
     }
-    nav ul li a {
-        text-decoration: none;
-        color: #fff; /* Text color */
-        font-size: 16px;
-        padding: 5px 10px;
-        transition: background-color 0.3s ease;
-    }
-    nav ul li a:hover {
-        background-color: #444; /* Background color on hover */
-    }
+}
+
+/* Animazioni e transizioni */
+nav ul li a {
+    transition: background-color 0.3s;
+}
+
 </style>
 
   </div>
