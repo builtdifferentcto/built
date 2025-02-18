@@ -365,34 +365,84 @@
   </div>
 <section class="video-section" style="text-align: center; margin: 20px;">
     <!-- Bottone per attivare il video -->
-    <button id="toggleVideo" class="button" style="font-family: 'Bangers', cursive; font-size: 36px; padding: 50px 120px; background-color: black; color: white; border: 2px solid white; cursor: pointer; border-radius: 10px; transition: background-color 0.3s;">
-        Watch Video
-    </button>
+    <style>
+    #toggleVideo {
+        background-color: black;
+        color: white;
+        font-family: 'Bangers', sans-serif;
+        font-size: 24px;
+        border: 2px solid white;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        display: block;
+        margin: 20px auto;
+    }
 
-    <!-- Contenitore del video -->
-    <div id="videoContainer" style="display: none; margin-top: 20px;">
-        <iframe id="videoPlayer" src="https://youtube.com/shorts/4z-TgSMCUK8" width="800" height="450" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    #toggleVideo:hover {
+        background-color: white;
+        color: black;
+    }
+
+    #videoContainer {
+        display: none;
+        overflow: hidden;
+        text-align: center;
+        margin-top: 20px;
+        transition: all 0.5s ease-in-out;
+        max-height: 0;
+    }
+
+    #videoWrapper {
+        position: relative;
+        width: 100%;
+        max-width: 560px;
+        margin: auto;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #videoPlayer {
+        width: 100%;
+        height: 315px;
+    }
+</style>
+
+<button id="toggleVideo">WATCH VIDEO</button>
+
+<div id="videoContainer">
+    <div id="videoWrapper">
+        <iframe id="videoPlayer" 
+            src="https://www.youtube.com/embed/4z-TgSMCUK8?rel=0&playsinline=1" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
     </div>
-</section>
+</div>
 
 <script>
-    const toggleButton = document.getElementById('toggleVideo');
-    const videoContainer = document.getElementById('videoContainer');
-    const videoPlayer = document.getElementById('videoPlayer');
+    document.addEventListener("DOMContentLoaded", function () {
+        var videoContainer = document.getElementById("videoContainer");
+        var videoPlayer = document.getElementById("videoPlayer");
+        var toggleButton = document.getElementById("toggleVideo");
 
-    // Funzione per mostrare il video e avviarlo automaticamente
-    toggleButton.addEventListener('click', function () {
-        if (videoContainer.style.display === 'none') {
-            videoContainer.style.display = 'block';
-            // Avviare il video
-            videoPlayer.src = "https://drive.google.com/file/d/1bWUUP2CRZen7JD9Xv-b-sPwrZzhGnE9g/preview?autoplay=1";
-        } else {
-            videoContainer.style.display = 'none';
-            // Fermare il video (aggiungi ?autoplay=0 per fermare il video)
-            videoPlayer.src = "https://drive.google.com/file/d/1bWUUP2CRZen7JD9Xv-b-sPwrZzhGnE9g/preview";
-        }
+        toggleButton.addEventListener("click", function () {
+            if (videoContainer.style.display === "none" || videoContainer.style.display === "") {
+                videoContainer.style.display = "block"; // Mostra il video
+                videoContainer.style.maxHeight = "500px"; // Espande il video con animazione
+                videoPlayer.src += "&autoplay=1"; // Avvia il video
+            } else {
+                videoContainer.style.maxHeight = "0"; // Ritira il video con animazione
+                setTimeout(function() {
+                    videoContainer.style.display = "none"; // Nasconde il video completamente
+                    videoPlayer.src = videoPlayer.src.split("&autoplay=1")[0]; // Ferma il video
+                }, 500); // Aspetta che l'animazione sia finita
+            }
+        });
     });
 </script>
+
 
   <!-- CONTENUTO PRINCIPALE -->
   <div class="container" id="main-content">
