@@ -15,13 +15,18 @@
       box-sizing: border-box;
     }
     body {
-    background: url('https://imagizer.imageshack.com/img924/4436/BRdqC4.jpg') no-repeat center center fixed; /* Sostituisci con il percorso dell'immagine */
-    background-size: cover;
-    color: white;
-    text-align: center;
-    overflow-x: hidden;
-}
-
+      background-image: url('https://imagizer.imageshack.com/img923/8048/iBfSDb.jpg');
+      background-size: 150%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #000;
+      color: white;
+      font-family: 'Bangers', cursive, Arial, sans-serif;
+      text-align: center;
+      overflow-y: auto;
+      text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+      letter-spacing: 1px;
+    }
     .menu {
       width: 100%;
       background-color: #111;
@@ -190,67 +195,102 @@
       color: white;
       text-decoration: none;
     }
-   /* Media Query per dispositivi piccoli (fino a 480px) */
-@media only screen and (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-    
-    .nav-menu {
-        display: none; /* Nascondi il menu per dispositivi piccoli */
-    }
-
-    .menu-toggle {
-        display: block; /* Mostra il pulsante hamburger */
-        font-size: 30px;
-    }
-
-    .social-icons {
-        font-size: 24px;
-        padding: 10px;
-    }
-
-    .banner {
-        padding: 15px;
-        font-size: 18px;
-    }
-
-    .preloader-text {
-        font-size: 18px;
-        animation: blink 1.5s infinite;
-    }
-
-    .video-container {
+    /* Media Queries per la Responsività */
+    @media (max-width: 768px) {
+      .menu a {
+        font-size: 1rem;
+        margin: 0 10px;
+      }
+      .banner-section {
+        height: 250px;
+      }
+      .section h2 {
+        font-size: 2.5rem;
+      }
+      .how-to-buy-box div {
         width: 100%;
-        height: auto;
+        margin-bottom: 20px;
+      }
+      .how-to-buy-box {
+        flex-direction: column;
+        align-items: center;
+      }
+      .text-box {
+        width: 90%;
+      }
+      .tokenomics-box {
+        font-size: 2rem;
+      }
     }
-
-    /* Ottimizzazione per il footer */
-    footer {
-        padding: 10px;
+    @media (max-width: 480px) {
+      .menu {
+        padding: 10px 0;
+      }
+      .menu a {
+        font-size: 0.9rem;
+        margin: 0 5px;
+      }
+      .banner-section {
+        height: 200px;
+      }
+      .section h2 {
+        font-size: 2rem;
+      }
+      .social-buttons {
+        gap: 10px;
+        margin: 15px 0;
+      }
+      .social-buttons a {
+        font-size: 1.5rem;
+        padding: 8px 16px;
+      }
+      .how-to-buy-box {
+        gap: 10px;
+      }
+      .how-to-buy-box div {
+        padding: 20px;
+        font-size: 1rem;
+      }
+      .tokenomics-box {
+        font-size: 1.5rem;
+      }
+      /* Ulteriore riduzione del font per il testo CA sui dispositivi molto piccoli */
+      #ca-text {
+        font-size: 1rem;
+      }
+      .footer {
+        font-size: 0.9rem;
+      }
     }
+@media (max-width: 768px) {
+  /* Modifica per il video */
+  #videoPlayer {
+    width: 100%;
+    height: auto;
+  }
+  #videoContainer {
+    margin-top: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-/* Media Query per dispositivi medi (fino a 768px) */
-@media only screen and (max-width: 768px) {
-    .nav-menu {
-        font-size: 18px;
-    }
-
-    .banner {
-        font-size: 22px;
-    }
-
-    .social-icons {
-        font-size: 26px;
-    }
-
-    .video-container {
-        width: 100%;
-        height: auto;
-    }
+@media (max-width: 480px) {
+  /* Modifica per il video sui dispositivi più piccoli */
+  #videoPlayer {
+    width: 100%;
+    height: auto;
+  }
+  #videoContainer {
+    margin-top: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
+  </style>
 </head>
 <body>
 <div id="preloader">
