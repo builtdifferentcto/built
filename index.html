@@ -315,6 +315,7 @@
     <a href="#about">$BUILT</a>
     <a href="#how-to-buy">How to Buy</a>
     <a href="#tokenomics">Tokenomics</a>
+    <a href="#roadmap">Roadmap</a></li>
     <a href="https://linktr.ee/BuiltDifferentCTO" target="_blank">Linktree</a>
   </div>
 
@@ -334,6 +335,36 @@
   <div class="social-text">
     <p id="ca-text" onclick="copyCA()">CA: vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</p>
   </div>
+<section class="video-section" style="text-align: center; margin: 20px;">
+    <!-- Bottone per attivare il video -->
+    <button id="toggleVideo" class="button" style="font-family: 'Bangers', cursive; font-size: 36px; padding: 50px 120px; background-color: black; color: white; border: 2px solid white; cursor: pointer; border-radius: 10px; transition: background-color 0.3s;">
+        Watch Video
+    </button>
+
+    <!-- Contenitore del video -->
+    <div id="videoContainer" style="display: none; margin-top: 20px;">
+        <iframe id="videoPlayer" src="https://drive.google.com/file/d/1bWUUP2CRZen7JD9Xv-b-sPwrZzhGnE9g/preview?autoplay=1" width="800" height="450" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</section>
+
+<script>
+    const toggleButton = document.getElementById('toggleVideo');
+    const videoContainer = document.getElementById('videoContainer');
+    const videoPlayer = document.getElementById('videoPlayer');
+
+    // Funzione per mostrare il video e avviarlo automaticamente
+    toggleButton.addEventListener('click', function () {
+        if (videoContainer.style.display === 'none') {
+            videoContainer.style.display = 'block';
+            // Avviare il video
+            videoPlayer.src = "https://drive.google.com/file/d/1bWUUP2CRZen7JD9Xv-b-sPwrZzhGnE9g/preview?autoplay=1";
+        } else {
+            videoContainer.style.display = 'none';
+            // Fermare il video (aggiungi ?autoplay=0 per fermare il video)
+            videoPlayer.src = "https://drive.google.com/file/d/1bWUUP2CRZen7JD9Xv-b-sPwrZzhGnE9g/preview";
+        }
+    });
+</script>
 
   <!-- CONTENUTO PRINCIPALE -->
   <div class="container" id="main-content">
@@ -352,6 +383,7 @@
     </div>
 
 <head>
+
   <!-- Aggiungi il link al font Bangers -->
   <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
@@ -505,6 +537,7 @@
   }
 </style>
 
+
     <!-- SEZIONE HOW TO BUY -->
     <div id="how-to-buy" class="section" style="margin-top: 120px;">
       <h2>How to Buy</h2>
@@ -548,7 +581,7 @@
       const caText = document.getElementById("ca-text").textContent;
       navigator.clipboard.writeText(caText)
         .then(() => {
-          alert("Address copied!!");
+          alert("Indirizzo copiato!");
         })
         .catch(err => {
           alert("Errore nella copia: " + err);
