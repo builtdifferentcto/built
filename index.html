@@ -15,15 +15,6 @@
       box-sizing: border-box;
     }
     body {
-      {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: white;
-            overflow-x: hidden; /* Impedisce lo scorrimento orizzontale dell'intero sito */
-        }
-
       background-image: url('https://imagizer.imageshack.com/img923/8048/iBfSDb.jpg');
       background-size: 150%;
       background-position: center;
@@ -204,25 +195,97 @@
       color: white;
       text-decoration: none;
     }
-      /* Menu mobile */
-        @media (max-width: 768px) {
-            nav ul {
-                display: flex;
-                justify-content: flex-start;
-                flex-wrap: nowrap; /* Impedisce che gli elementi vadano a capo */
-                overflow-x: auto; /* Consente lo scorrimento orizzontale se necessario */
-            }
+    /* Media Queries per la Responsività */
+    @media (max-width: 768px) {
+      .menu a {
+        font-size: 1rem;
+        margin: 0 10px;
+      }
+      .banner-section {
+        height: 250px;
+      }
+      .section h2 {
+        font-size: 2.5rem;
+      }
+      .how-to-buy-box div {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .how-to-buy-box {
+        flex-direction: column;
+        align-items: center;
+      }
+      .text-box {
+        width: 90%;
+      }
+      .tokenomics-box {
+        font-size: 2rem;
+      }
+    }
+   @media (max-width: 480px) {
+  /* Ottimizzazione per il menu */
+  .menu {
+    padding: 8px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #fff;
+    display: flex; /* Usa flexbox per il layout del menu */
+    justify-content: flex-start; /* Allinea gli elementi a sinistra */
+    flex-wrap: wrap; /* Permette alle voci di andare a capo quando non c'è spazio */
+    overflow-x: auto; /* Aggiungi lo scroll orizzontale se necessario */
+  }
+  .menu a {
+    font-size: 1rem;
+    margin: 0 10px;
+    padding: 6px 12px;
+    display: inline-block;
+    white-space: nowrap; /* Evita che il testo si divida in più righe */
+  }
 
-            nav li {
-                margin-right: 20px; /* Distanza tra gli elementi del menu */
-            }
+  /* Ottimizzazione della sezione banner */
+  .banner-section {
+    height: 180px;
+  }
 
-            nav a {
-                font-size: 16px; /* Puoi regolare la dimensione del testo come preferisci */
-                padding: 10px;
-                white-space: nowrap; /* Impedisce che il testo vada a capo */
-            }
-        }
+  /* Riduzione font nella sezione h2 */
+  .section h2 {
+    font-size: 1.8rem;
+    padding: 10px 0;
+  }
+
+  /* Ottimizzazione dei bottoni social */
+  .social-buttons {
+    gap: 8px;
+    margin: 10px 0;
+  }
+  .social-buttons a {
+    font-size: 1.4rem;
+    padding: 6px 12px;
+  }
+
+  /* Box "How to buy" ottimizzato */
+  .how-to-buy-box {
+    gap: 8px;
+  }
+  .how-to-buy-box div {
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+
+  /* Ottimizzazione della box Tokenomics */
+  .tokenomics-box {
+    font-size: 1.4rem;
+  }
+
+  /* Ottimizzazione del testo CA per dispositivi molto piccoli */
+  #ca-text {
+    font-size: 1.2rem;
+  }
+
+  /* Ottimizzazione del footer */
+  .footer {
+    font-size: 0.8rem;
+  }
+}
 
 @media (max-width: 768px) {
   /* Modifica per il video */
@@ -689,10 +752,10 @@
       const caText = document.getElementById("ca-text").textContent;
       navigator.clipboard.writeText(caText)
         .then(() => {
-          alert("Address Copied");
+          alert("Address Copied!");
         })
         .catch(err => {
-          alert("Errore nella copia: " + err);
+          alert("Error: " + err);
         });
     }
   </script>
