@@ -200,14 +200,14 @@
 @media (max-width: 768px) {
   .menu {
     display: flex;
-    flex-wrap: wrap; /* Permette alle voci di andare su più righe se necessario */
+    flex-direction: row; /* Disposizione orizzontale per il menu */
     justify-content: center; /* Centra le voci orizzontalmente */
     padding: 10px 0;
   }
 
   .menu a {
     font-size: 1rem;
-    margin: 0 5px; /* Riduce lo spazio tra le voci */
+    margin: 0 10px; /* Riduce lo spazio tra le voci */
     text-align: center;
   }
 
@@ -242,12 +242,13 @@
   .menu {
     padding: 8px 0;
     justify-content: center; /* Centra le voci orizzontalmente */
-    flex-wrap: wrap; /* Permette la distribuzione su più righe */
+    flex-direction: row; /* Disposizione orizzontale per il menu */
+    flex-wrap: nowrap; /* Impedisce il wrap delle voci */
   }
 
   .menu a {
     font-size: 0.9rem;
-    margin: 0 5px; /* Ulteriore riduzione dello spazio */
+    margin: 0 5px; /* Riduce lo spazio tra le voci */
     padding: 8px 12px; /* Ottimizza l'area cliccabile */
   }
 
@@ -291,6 +292,7 @@
     font-size: 0.9rem;
   }
 }
+
 
 @media (max-width: 768px) {
   /* Modifica per il video */
