@@ -195,6 +195,81 @@
       color: white;
       text-decoration: none;
     }
+    /* Stile base per l'header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Menu orizzontale */
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0 10px; /* Riduciamo lo spazio tra gli elementi */
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px; /* Riduciamo la dimensione del testo */
+    padding: 5px 8px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffcc00;
+}
+
+/* Adattiamo il menu per schermi piccoli */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 8px 10px;
+    }
+
+    .logo a {
+        font-size: 18px; /* Riduciamo leggermente il logo */
+    }
+
+    .nav-menu ul {
+        display: flex;
+        justify-content: center; /* Centriamo il menu */
+        width: 100%;
+    }
+
+    .nav-menu li {
+        margin: 0 5px; /* Riduciamo ulteriormente lo spazio tra gli elementi */
+    }
+
+    .nav-menu a {
+        font-size: 14px; /* Riduciamo la dimensione del testo per adattarlo meglio */
+        padding: 4px 6px;
+    }
+}
+
     /* Media Queries per la Responsività */
     @media (max-width: 768px) {
       .menu a {
