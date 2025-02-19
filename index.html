@@ -196,64 +196,68 @@
       text-decoration: none;
     }
     /* Media Queries per la Responsività */
-    @media (max-width: 768px) {
-      .menu a {
-        font-size: 1rem;
-        margin: 0 10px;
-      }
-      .banner-section {
-        height: 250px;
-      }
-      .section h2 {
-        font-size: 2.5rem;
-      }
-      .how-to-buy-box div {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      .how-to-buy-box {
-        flex-direction: column;
-        align-items: center;
-      }
-      .text-box {
-        width: 90%;
-      }
-      .tokenomics-box {
-        font-size: 2rem;
-      }
-    }
-    @media (max-width: 480px) {
-      .menu {
-        padding: 10px 0;
-      }
-      .menu a {
-        font-size: 0.9rem;
-        margin: 0 5px;
-      }
-      .banner-section {
-        height: 200px;
-      }
-      .section h2 {
-        font-size: 2rem;
-      }
-      .social-buttons {
-        gap: 10px;
-        margin: 15px 0;
-      }
-      .social-buttons a {
-        font-size: 1.5rem;
-        padding: 8px 16px;
-      }
-      .how-to-buy-box {
-        gap: 10px;
-      }
-      .how-to-buy-box div {
-        padding: 20px;
-        font-size: 1rem;
-      }
-      .tokenomics-box {
-        font-size: 1.5rem;
-      }
+   .menu {
+  width: 100%;
+  background-color: #111;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centra gli elementi del menu */
+  flex-wrap: wrap; /* Consente l'elemento di andare a capo sui dispositivi più piccoli */
+}
+
+nav ul li {
+  margin: 0 15px; /* Distanza tra gli elementi del menu */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 5px 15px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #444;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    padding: 10px 0;
+  }
+
+  nav ul {
+    flex-direction: column; /* Metti gli elementi del menu in colonna sui dispositivi più piccoli */
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Maggiore distanza tra le voci del menu su mobile */
+  }
+
+  nav ul li a {
+    font-size: 1.1rem; /* Font un po' più piccolo su dispositivi più piccoli */
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 1rem; /* Font ancora più piccolo per dispositivi molto piccoli */
+    padding: 5px 10px; /* Riduce l'area di click */
+  }
+}
+
       /* Ulteriore riduzione del font per il testo CA sui dispositivi molto piccoli */
       #ca-text {
         font-size: 1rem;
