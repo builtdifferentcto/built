@@ -195,81 +195,25 @@
       color: white;
       text-decoration: none;
     }
-    /* Media Queries per la Responsività */
-    @media (max-width: 768px) {
-      .menu a {
-        font-size: 1rem;
-        margin: 0 2px;
-      }
-      .banner-section {
-        height: 250px;
-      }
-      .section h2 {
-        font-size: 2.5rem;
-      }
-      .how-to-buy-box div {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      .how-to-buy-box {
-        flex-direction: column;
-        align-items: center;
-      }
-      .text-box {
-        width: 90%;
-      }
-      .tokenomics-box {
-        font-size: 2rem;
-      }
-    }
-    @media (max-width: 480px) {
-      .menu {
-        padding: 2px 0;
-      }
-      .menu a {
-        font-size: 0.9rem;
-        margin: 0 2px;
-      }
-      .banner-section {
-        height: 200px;
-      }
-      .section h2 {
-        font-size: 2rem;
-      }
-      .social-buttons {
-        gap: 10px;
-        margin: 15px 0;
-      }
-      .social-buttons a {
-        font-size: 1.5rem;
-        padding: 8px 16px;
-      }
-      .how-to-buy-box {
-        gap: 10px;
-      }
-      .how-to-buy-box div {
-        padding: 20px;
-        font-size: 1rem;
-      }
-      .tokenomics-box {
-        font-size: 1.5rem;
-      }
-      /* Ulteriore riduzione del font per il testo CA sui dispositivi molto piccoli */
-      #ca-text {
-        font-size: 1rem;
-      }
-      .footer {
-        font-size: 0.9rem;
-      }
-    }
-    @media (max-width: 768px) {
-  nav ul li {
-    margin-right: 2px; /* Riduce lo spazio tra gli elementi del menu */
-  }
-  .menu a {
-    font-size: 1rem; /* Puoi anche ridurre la dimensione del testo se necessario */
-  }
-}
+      /* Menu mobile */
+        @media (max-width: 768px) {
+            nav ul {
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: nowrap; /* Impedisce che gli elementi vadano a capo */
+                overflow-x: auto; /* Consente lo scorrimento orizzontale se necessario */
+            }
+
+            nav li {
+                margin-right: 20px; /* Distanza tra gli elementi del menu */
+            }
+
+            nav a {
+                font-size: 16px; /* Puoi regolare la dimensione del testo come preferisci */
+                padding: 10px;
+                white-space: nowrap; /* Impedisce che il testo vada a capo */
+            }
+        }
 
 @media (max-width: 768px) {
   /* Modifica per il video */
