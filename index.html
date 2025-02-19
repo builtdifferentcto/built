@@ -222,28 +222,35 @@
         font-size: 2rem;
       }
     }
-  @media (max-width: 480px) {
+ @media (max-width: 480px) {
+  /* Disabilitare lo scroll orizzontale */
+  body {
+    overflow-x: hidden; /* Impedisce lo scroll orizzontale */
+  }
+
   /* Menu styling */
   .menu {
     padding: 8px 0;
     background-color: rgba(0, 0, 0, 0.8);
     border-bottom: 2px solid #fff;
-    overflow-x: auto; /* Permette lo scroll orizzontale se necessario */
-    white-space: nowrap; /* Evita la divisione delle voci in più righe */
-    text-align: center; /* Centra il menu */
+    display: flex;
+    justify-content: center; /* Centra il menu orizzontalmente */
+    align-items: center;
+    flex-wrap: nowrap; /* Impedisce che il menu vada a capo */
+    overflow-x: auto; /* Aggiungi scroll orizzontale solo se le voci non ci stanno */
   }
 
   .menu a {
     font-size: 1rem;
     padding: 8px 12px;
-    display: inline-block; /* Ogni voce del menu è trattata come un elemento inline-block */
+    display: inline-block;
     margin-right: 10px;
-    white-space: nowrap; /* Evita il salto della voce su più righe */
+    white-space: nowrap; /* Impedisce che le voci si spezzino su più righe */
   }
 
   /* Sezione Banner */
   .banner-section {
-    height: 180px; /* Altezza ottimizzata per dispositivi mobili */
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -254,9 +261,10 @@
   .how-to-buy-box {
     gap: 8px;
     display: flex;
-    flex-direction: column; /* Adatta la disposizione a colonna su dispositivi mobili */
+    flex-direction: column;
     padding: 15px;
   }
+
   .how-to-buy-box div {
     padding: 15px;
     font-size: 1.1rem;
@@ -283,6 +291,7 @@
     display: flex;
     justify-content: center;
   }
+
   .social-buttons a {
     font-size: 1.4rem;
     padding: 6px 12px;
@@ -323,8 +332,6 @@
     text-align: center;
   }
 }
-
-
 
 @media (max-width: 768px) {
   /* Modifica per il video */
