@@ -195,61 +195,73 @@
       color: white;
       text-decoration: none;
     }
-/* Base per il menu (desktop) */
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  transition: background-color 0.3s;
-}
-
-.menu a:hover {
-  background-color: #555;
-}
-
-/* Layout del menu mobile */
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 10px;
-  }
-
-  .menu a {
-    padding: 12px 20px;
-    font-size: 1rem;
-    width: 100%; /* Il menu prende tutta la larghezza */
-    text-align: left; /* Allineamento a sinistra per una visibilità migliore */
-  }
-
-  /* Evitare sovrapposizioni del testo nel menu */
-  .menu a:not(:last-child) {
-    margin-bottom: 10px; /* Spaziatura tra gli elementi */
-  }
-}
-
-/* Mobile - Ultra small screen (fino a 480px) */
-@media (max-width: 480px) {
-  .menu {
-    padding: 15px 5px;
-  }
-
-  .menu a {
-    font-size: 0.9rem;
-    padding: 10px 15px;
-  }
-}
-
-
+    /* Media Queries per la Responsività */
+    @media (max-width: 768px) {
+      .menu a {
+        font-size: 1rem;
+        margin: 0 10px;
+      }
+      .banner-section {
+        height: 250px;
+      }
+      .section h2 {
+        font-size: 2.5rem;
+      }
+      .how-to-buy-box div {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .how-to-buy-box {
+        flex-direction: column;
+        align-items: center;
+      }
+      .text-box {
+        width: 90%;
+      }
+      .tokenomics-box {
+        font-size: 2rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .menu {
+        padding: 10px 0;
+      }
+      .menu a {
+        font-size: 0.9rem;
+        margin: 0 5px;
+      }
+      .banner-section {
+        height: 200px;
+      }
+      .section h2 {
+        font-size: 2rem;
+      }
+      .social-buttons {
+        gap: 10px;
+        margin: 15px 0;
+      }
+      .social-buttons a {
+        font-size: 1.5rem;
+        padding: 8px 16px;
+      }
+      .how-to-buy-box {
+        gap: 10px;
+      }
+      .how-to-buy-box div {
+        padding: 20px;
+        font-size: 1rem;
+      }
+      .tokenomics-box {
+        font-size: 1.5rem;
+      }
+      /* Ulteriore riduzione del font per il testo CA sui dispositivi molto piccoli */
+      #ca-text {
+        font-size: 1rem;
+      }
+      .footer {
+        font-size: 0.9rem;
+      }
+    }
 @media (max-width: 768px) {
   /* Modifica per il video */
   #videoPlayer {
