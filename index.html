@@ -235,7 +235,7 @@ nav ul li a:hover {
 .menu {
   width: 100%;
   background-color: #111;
-  padding: 15px 0;
+  padding: 10px 0;  /* Spazio ridotto */
   position: fixed;
   top: 0;
   left: 0;
@@ -252,14 +252,14 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 10px; /* Ridotto lo spazio tra le voci */
+  margin: 0 5px;  /* Ulteriore riduzione dello spazio tra le voci */
 }
 
 nav ul li a {
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
-  padding: 5px 12px; /* Ridotto il padding per un aspetto più compatto */
+  padding: 8px 15px; /* Riduzione del padding */
   transition: background-color 0.3s ease;
 }
 
@@ -269,7 +269,7 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
   .menu {
-    padding: 10px 0;
+    padding: 8px 0;
   }
 
   nav ul {
@@ -277,22 +277,21 @@ nav ul li a:hover {
   }
 
   nav ul li {
-    margin: 0 8px; /* Spaziatura ridotta sui dispositivi mobili */
+    margin: 0 4px;  /* Spaziatura ridotta sui dispositivi mobili */
   }
 
   nav ul li a {
     font-size: 1.1rem;
+    padding: 6px 12px; /* Ulteriore riduzione del padding per i dispositivi mobili */
   }
 }
 
 @media (max-width: 480px) {
   nav ul li a {
     font-size: 1rem;
-    padding: 5px 8px; /* Ulteriore riduzione del padding sui dispositivi più piccoli */
+    padding: 5px 10px; /* Ancora meno padding sui dispositivi più piccoli */
   }
 }
-
-
 
       /* Ulteriore riduzione del font per il testo CA sui dispositivi molto piccoli */
       #ca-text {
