@@ -195,73 +195,101 @@
       color: white;
       text-decoration: none;
     }
-    /* Media Queries per la Responsività */
-    @media (max-width: 768px) {
-      .menu a {
-        font-size: 1rem;
-        margin: 0 2px;
-      }
-      .banner-section {
-        height: 250px;
-      }
-      .section h2 {
-        font-size: 2.5rem;
-      }
-      .how-to-buy-box div {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      .how-to-buy-box {
-        flex-direction: column;
-        align-items: center;
-      }
-      .text-box {
-        width: 90%;
-      }
-      .tokenomics-box {
-        font-size: 2rem;
-      }
-    }
-    @media (max-width: 480px) {
-      .menu {
-        padding: 8px 0;
-      }
-      .menu a {
-        font-size: 0.9rem;
-        margin: 0 2px;
-      }
-      .banner-section {
-        height: 200px;
-      }
-      .section h2 {
-        font-size: 2rem;
-      }
-      .social-buttons {
-        gap: 10px;
-        margin: 15px 0;
-      }
-      .social-buttons a {
-        font-size: 1.5rem;
-        padding: 8px 16px;
-      }
-      .how-to-buy-box {
-        gap: 10px;
-      }
-      .how-to-buy-box div {
-        padding: 20px;
-        font-size: 1rem;
-      }
-      .tokenomics-box {
-        font-size: 1.5rem;
-      }
-      /* Ulteriore riduzione del font per il testo CA sui dispositivi molto piccoli */
-      #ca-text {
-        font-size: 1rem;
-      }
-      .footer {
-        font-size: 0.9rem;
-      }
-    }
+   /* Media Queries per la Responsività */
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-wrap: wrap; /* Permette alle voci di adattarsi alla larghezza */
+    justify-content: center; /* Centra le voci orizzontalmente */
+    padding: 10px 0;
+  }
+
+  .menu a {
+    font-size: 1rem;
+    margin: 0 5px; /* Riduce lo spazio tra le voci */
+    text-align: center;
+  }
+
+  .banner-section {
+    height: 250px;
+  }
+
+  .section h2 {
+    font-size: 2.5rem;
+  }
+
+  .how-to-buy-box div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .how-to-buy-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-box {
+    width: 90%;
+  }
+
+  .tokenomics-box {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    padding: 8px 0;
+    justify-content: space-around; /* Distribuisce uniformemente le voci */
+  }
+
+  .menu a {
+    font-size: 0.9rem;
+    margin: 0 3px; /* Ulteriore riduzione dello spazio */
+    padding: 8px 12px; /* Ottimizza l'area cliccabile */
+  }
+
+  .banner-section {
+    height: 200px;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .social-buttons {
+    gap: 10px;
+    margin: 15px 0;
+  }
+
+  .social-buttons a {
+    font-size: 1.5rem;
+    padding: 8px 16px;
+  }
+
+  .how-to-buy-box {
+    gap: 10px;
+  }
+
+  .how-to-buy-box div {
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  .tokenomics-box {
+    font-size: 1.5rem;
+  }
+
+  /* Ulteriore riduzione del font per il testo CA sui dispositivi molto piccoli */
+  #ca-text {
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 768px) {
   /* Modifica per il video */
   #videoPlayer {
