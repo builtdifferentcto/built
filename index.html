@@ -222,8 +222,7 @@
         font-size: 2rem;
       }
     }
-   @media (max-width: 480px) {
-@media (max-width: 480px) {
+  @media (max-width: 480px) {
   /* Menu styling */
   .menu {
     padding: 8px 0;
@@ -231,6 +230,7 @@
     border-bottom: 2px solid #fff;
     overflow-x: auto; /* Permette lo scroll orizzontale se necessario */
     white-space: nowrap; /* Evita la divisione delle voci in più righe */
+    text-align: center; /* Centra il menu */
   }
 
   .menu a {
@@ -238,52 +238,92 @@
     padding: 8px 12px;
     display: inline-block; /* Ogni voce del menu è trattata come un elemento inline-block */
     margin-right: 10px;
+    white-space: nowrap; /* Evita il salto della voce su più righe */
   }
 
-  /* Ridurre altezza banner */
+  /* Sezione Banner */
   .banner-section {
-    height: 180px;
+    height: 180px; /* Altezza ottimizzata per dispositivi mobili */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
   }
 
-  /* Sezione h2 con font ridotto */
+  /* Box How to Buy */
+  .how-to-buy-box {
+    gap: 8px;
+    display: flex;
+    flex-direction: column; /* Adatta la disposizione a colonna su dispositivi mobili */
+    padding: 15px;
+  }
+  .how-to-buy-box div {
+    padding: 15px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  /* Box Tokenomics */
+  .tokenomics-box {
+    font-size: 1.4rem;
+    padding: 15px;
+    text-align: center;
+  }
+
+  /* Ridurre la grandezza del titolo h2 nelle sezioni */
   .section h2 {
     font-size: 1.8rem;
+    text-align: center;
   }
 
   /* Bottoni social */
   .social-buttons {
     gap: 8px;
     margin: 10px 0;
+    display: flex;
+    justify-content: center;
   }
   .social-buttons a {
     font-size: 1.4rem;
     padding: 6px 12px;
   }
 
-  /* Box How to Buy */
-  .how-to-buy-box {
-    gap: 8px;
-  }
-  .how-to-buy-box div {
-    padding: 15px;
-    font-size: 1.1rem;
-  }
-
-  /* Box Tokenomics */
-  .tokenomics-box {
-    font-size: 1.4rem;
-  }
-
   /* Testo CA per dispositivi piccoli */
   #ca-text {
     font-size: 1.2rem;
+    text-align: center;
   }
 
   /* Footer */
   .footer {
     font-size: 0.8rem;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* Immagini */
+  img {
+    width: 100%; /* Le immagini si adattano alla larghezza del dispositivo */
+    height: auto;
+    display: block;
+  }
+
+  /* Aggiustamenti per contenuti a colonna (flex) */
+  .how-to-buy-box,
+  .tokenomics-box {
+    display: flex;
+    flex-direction: column; /* Garantisce che gli elementi siano disposti in colonna */
+    gap: 12px;
+  }
+
+  /* Ottimizzazione del footer */
+  .footer {
+    font-size: 0.9rem;
+    padding: 10px;
+    text-align: center;
   }
 }
+
 
 
 @media (max-width: 768px) {
