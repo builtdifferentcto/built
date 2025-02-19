@@ -197,166 +197,63 @@
     }
     /* Media Queries per la Responsività */
     @media (max-width: 768px) {
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Optimized Menu</title>
-  <style>
-    /* Style for the page */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .menu {
-      width: 100%;
-      background-color: #111;
-      padding: 15px 0;
-      position: fixed;
-      top: 0;
-      left: 0;
-      text-align: center;
-      z-index: 1000;
-    }
-
-    .menu a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 1.2rem;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #000;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-
-    nav ul li {
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 16px;
-      padding: 5px 10px;
-      transition: background-color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      background-color: #444;
-    }
-
-    /* Hamburger menu style */
-    .menu-icon {
-      display: none;
-      cursor: pointer;
-      font-size: 2rem;
-      color: white;
-      padding: 10px;
-    }
-
-    .menu-icon div {
-      width: 30px;
-      height: 3px;
-      background-color: white;
-      margin: 5px 0;
-    }
-
-    /* Hide dropdown menu by default on mobile */
-    nav ul {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-    }
-
-    nav ul li {
-      margin: 15px 0;
-      text-align: center;
-    }
-
-    /* Media query for mobile devices */
-    @media (max-width: 768px) {
-      /* Show hamburger icon on mobile */
-      .menu-icon {
-        display: block;
+      .menu a {
+        font-size: 1rem;
+        margin: 0 10px;
+      }
+      .banner-section {
+        height: 250px;
+      }
+      .section h2 {
+        font-size: 2.5rem;
+      }
+      .how-to-buy-box div {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .how-to-buy-box {
+        flex-direction: column;
+        align-items: center;
+      }
+      .text-box {
+        width: 90%;
+      }
+      .tokenomics-box {
+        font-size: 2rem;
       }
     }
-
-    /* Show the menu when the 'show' class is added */
-    nav ul.show {
-      display: flex;
-    }
-
-    /* Add some padding to the body to prevent content from being hidden behind the fixed navbar */
-    body {
-      padding-top: 80px;
-    }
-  </style>
-</head>
-<body>
-  <!-- MENU -->
-  <div class="menu">
-    <nav>
-      <div class="menu-icon">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#roadmap">Roadmap</a></li>
-        <li><a href="#tokenomics">Tokenomics</a></li>
-        <li><a href="https://built-different-cto.gitbook.io/built-different-cto/" target="_blank">Whitepaper</a></li>
-        <li><a href="https://linktr.ee/BuiltDifferentCTO" target="_blank">Linktree</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <!-- Content sections -->
-  <div id="home" style="height: 100vh; background-color: lightgrey;">
-    <h1>Home Section</h1>
-    <p>This is the Home section.</p>
-  </div>
-  <div id="about" style="height: 100vh; background-color: lightblue;">
-    <h1>About Section</h1>
-    <p>This is the About section.</p>
-  </div>
-  <div id="roadmap" style="height: 100vh; background-color: lightgreen;">
-    <h1>Roadmap Section</h1>
-    <p>This is the Roadmap section.</p>
-  </div>
-  <div id="tokenomics" style="height: 100vh; background-color: lightcoral;">
-    <h1>Tokenomics Section</h1>
-    <p>This is the Tokenomics section.</p>
-  </div>
-
-  <!-- JavaScript to toggle the menu -->
-  <script>
-    // Toggle menu visibility on mobile
-    const menuIcon = document.querySelector('.menu-icon');
-    const menuList = document.querySelector('nav ul');
-
-    menuIcon.addEventListener('click', () => {
-      menuList.classList.toggle('show');
-    });
-  </script>
-</body>
-</html>
-
+    @media (max-width: 480px) {
+      .menu {
+        padding: 10px 0;
+      }
+      .menu a {
+        font-size: 0.9rem;
+        margin: 0 5px;
+      }
+      .banner-section {
+        height: 200px;
+      }
+      .section h2 {
+        font-size: 2rem;
+      }
+      .social-buttons {
+        gap: 10px;
+        margin: 15px 0;
+      }
+      .social-buttons a {
+        font-size: 1.5rem;
+        padding: 8px 16px;
+      }
+      .how-to-buy-box {
+        gap: 10px;
+      }
+      .how-to-buy-box div {
+        padding: 20px;
+        font-size: 1rem;
+      }
+      .tokenomics-box {
+        font-size: 1.5rem;
+      }
       /* Ulteriore riduzione del font per il testo CA sui dispositivi molto piccoli */
       #ca-text {
         font-size: 1rem;
