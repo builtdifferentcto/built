@@ -196,10 +196,11 @@
       text-decoration: none;
     }
    /* Media Queries per la Responsività */
+/* Media Queries per la Responsività */
 @media (max-width: 768px) {
   .menu {
     display: flex;
-    flex-wrap: wrap; /* Permette alle voci di adattarsi alla larghezza */
+    flex-wrap: wrap; /* Permette alle voci di andare su più righe se necessario */
     justify-content: center; /* Centra le voci orizzontalmente */
     padding: 10px 0;
   }
@@ -240,12 +241,13 @@
 @media (max-width: 480px) {
   .menu {
     padding: 8px 0;
-    justify-content: space-around; /* Distribuisce uniformemente le voci */
+    justify-content: center; /* Centra le voci orizzontalmente */
+    flex-wrap: wrap; /* Permette la distribuzione su più righe */
   }
 
   .menu a {
     font-size: 0.9rem;
-    margin: 0 3px; /* Ulteriore riduzione dello spazio */
+    margin: 0 5px; /* Ulteriore riduzione dello spazio */
     padding: 8px 12px; /* Ottimizza l'area cliccabile */
   }
 
