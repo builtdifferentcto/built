@@ -195,23 +195,60 @@
       color: white;
       text-decoration: none;
     }
-/* Ridurre lo spazio tra le voci del menu su mobile */
+/* Base per il menu (desktop) */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.menu a:hover {
+  background-color: #555;
+}
+
+/* Layout del menu mobile */
 @media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 10px;
+  }
+
   .menu a {
+    padding: 12px 20px;
     font-size: 1rem;
-    margin: 0 8px; /* Spazio ridotto tra le voci */
+    width: 100%; /* Il menu prende tutta la larghezza */
+    text-align: left; /* Allineamento a sinistra per una visibilità migliore */
+  }
+
+  /* Evitare sovrapposizioni del testo nel menu */
+  .menu a:not(:last-child) {
+    margin-bottom: 10px; /* Spaziatura tra gli elementi */
   }
 }
 
+/* Mobile - Ultra small screen (fino a 480px) */
 @media (max-width: 480px) {
   .menu {
-    padding: 10px 0;
+    padding: 15px 5px;
   }
+
   .menu a {
     font-size: 0.9rem;
-    margin: 0 5px; /* Spazio ulteriormente ridotto */
+    padding: 10px 15px;
   }
 }
+
 
 @media (max-width: 768px) {
   /* Modifica per il video */
