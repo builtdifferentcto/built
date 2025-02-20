@@ -84,11 +84,11 @@
       margin-bottom: 20px;
     }
     #ca-text {
-      font-size: 1.5rem; /* dimensione ridotta */
+      font-size: 1.5rem;
       color: white;
       cursor: pointer;
       user-select: none;
-      border: 2px solid white; /* incorniciatura */
+      border: 2px solid white;
       display: inline-block;
       padding: 5px 10px;
       border-radius: 5px;
@@ -227,16 +227,19 @@
       body {
         overflow-x: hidden;
       }
-      /* Menu styling */
+      /* Menu styling per dispositivi mobili:
+         - Riduciamo il padding e il font
+         - Allineiamo a sinistra per far partire lo scroll dalla prima voce */
       .menu {
         padding: 5px 0;
         background-color: rgba(0, 0, 0, 0.8);
         border-bottom: 2px solid #fff;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         flex-wrap: nowrap;
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
       }
       .menu a {
         font-size: 0.85rem;
