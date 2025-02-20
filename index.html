@@ -222,235 +222,230 @@
         font-size: 2rem;
       }
     }
-@media (max-width: 480px) {
-  /* Disabilitare lo scroll orizzontale */
-  body {
-    overflow-x: hidden; /* Impedisce lo scroll orizzontale */
-  }
-
-  /* Menu styling */
-  .menu {
-    padding: 5px 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-bottom: 2px solid #fff;
-    display: flex;
-    justify-content: center; /* Centra il menu orizzontalmente */
-    align-items: center;
-    flex-wrap: nowrap; /* Impedisce che il menu vada a capo */
-    overflow-x: auto; /* Aggiungi scroll orizzontale solo se le voci non ci stanno */
-  }
-
-  .menu a {
-    font-size: 0.85rem; /* Ridurre la dimensione del font */
-    padding: 6px 10px; /* Ridurre il padding per risparmiare spazio */
-    display: inline-block;
-    margin-right: 5px; /* Ridurre lo spazio tra le voci */
-    white-space: nowrap; /* Impedisce che le voci si spezzino su più righe */
-  }
-
-  /* Sezione Banner */
-  .banner-section {
-    height: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px;
-  }
-
-  /* Box How to Buy */
-  .how-to-buy-box {
-    gap: 8px;
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-  }
-
-  .how-to-buy-box div {
-    padding: 12px;
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  /* Box Tokenomics */
-  .tokenomics-box {
-    font-size: 1.3rem;
-    padding: 12px;
-    text-align: center;
-  }
-
-  /* Ridurre la grandezza del titolo h2 nelle sezioni */
-  .section h2 {
-    font-size: 1.6rem;
-    text-align: center;
-  }
-
-  /* Bottoni social */
-  .social-buttons {
-    gap: 8px;
-    margin: 10px 0;
-    display: flex;
-    justify-content: center;
-  }
-
-  .social-buttons a {
-    font-size: 1.4rem;
-    padding: 6px 12px;
-  }
-
-  /* Testo CA per dispositivi piccoli */
-  #ca-text {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  /* Footer */
-  .footer {
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  /* Immagini */
-  img {
-    width: 100%; /* Le immagini si adattano alla larghezza del dispositivo */
-    height: auto;
-    display: block;
-  }
-
-  /* Aggiustamenti per contenuti a colonna (flex) */
-  .how-to-buy-box,
-  .tokenomics-box {
-    display: flex;
-    flex-direction: column; /* Garantisce che gli elementi siano disposti in colonna */
-    gap: 12px;
-  }
-
-  /* Ottimizzazione del footer */
-  .footer {
-    font-size: 0.9rem;
-    padding: 10px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Modifica per il video */
-  #videoPlayer {
-    width: 100%;
-    height: auto;
-  }
-  #videoContainer {
-    margin-top: 10px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Modifica per il video sui dispositivi più piccoli */
-  #videoPlayer {
-    width: 100%;
-    height: auto;
-  }
-  #videoContainer {
-    margin-top: 10px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-  </style>
-</head>
-<body>
-<div id="preloader">
-    <div id="preloader-text">WE ARE $BUILT DIFFERENT</div>
-</div>
-
-<style>
-    /* Stile del preloader */
-    #preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: black;
+    @media (max-width: 480px) {
+      /* Disabilitare lo scroll orizzontale */
+      body {
+        overflow-x: hidden;
+      }
+      /* Menu styling */
+      .menu {
+        padding: 5px 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-bottom: 2px solid #fff;
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 999999; /* Assicura che il preloader sia sopra tutto */
-        transition: opacity 1s ease-out, visibility 1s ease-out;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+      .menu a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        display: inline-block;
+        margin-right: 5px;
+        white-space: nowrap;
+      }
+      /* Sezione Banner */
+      .banner-section {
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+      }
+      /* Box How to Buy */
+      .how-to-buy-box {
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+      }
+      .how-to-buy-box div {
+        padding: 12px;
+        font-size: 1rem;
+        text-align: center;
+      }
+      /* Box Tokenomics */
+      .tokenomics-box {
+        font-size: 1.3rem;
+        padding: 12px;
+        text-align: center;
+      }
+      /* Ridurre la grandezza del titolo h2 nelle sezioni */
+      .section h2 {
+        font-size: 1.6rem;
+        text-align: center;
+      }
+      /* Bottoni social */
+      .social-buttons {
+        gap: 8px;
+        margin: 10px 0;
+        display: flex;
+        justify-content: center;
+      }
+      .social-buttons a {
+        font-size: 1.4rem;
+        padding: 6px 12px;
+      }
+      /* Testo CA per dispositivi piccoli */
+      #ca-text {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+      /* Footer */
+      .footer {
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 10px 0;
+      }
+      /* Immagini */
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      /* Aggiustamenti per contenuti a colonna (flex) */
+      .how-to-buy-box,
+      .tokenomics-box {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      /* Ottimizzazione del footer */
+      .footer {
+        font-size: 0.9rem;
+        padding: 10px;
+        text-align: center;
+      }
     }
+    @media (max-width: 768px) {
+      /* Modifica per il video */
+      #videoPlayer {
+        width: 100%;
+        height: auto;
+      }
+      #videoContainer {
+        margin-top: 10px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    @media (max-width: 480px) {
+      /* Modifica per il video sui dispositivi più piccoli */
+      #videoPlayer {
+        width: 100%;
+        height: auto;
+      }
+      #videoContainer {
+        margin-top: 10px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    /* Ripple Effect */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      animation: ripple-animation 0.6s linear;
+      background-color: rgba(255, 255, 255, 0.7);
+      pointer-events: none;
+    }
+    @keyframes ripple-animation {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="preloader">
+    <div id="preloader-text">WE ARE $BUILT DIFFERENT</div>
+  </div>
 
+  <style>
+    /* Stile del preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999999;
+      transition: opacity 1s ease-out, visibility 1s ease-out;
+    }
     /* Testo lampeggiante */
     #preloader-text {
-        font-size: 80px; /* Testo più grande */
-        font-family: 'Bangers', sans-serif;
-        color: white;
-        text-align: center;
-        animation: blink 1.5s infinite alternate;
+      font-size: 80px;
+      font-family: 'Bangers', sans-serif;
+      color: white;
+      text-align: center;
+      animation: blink 1.5s infinite alternate;
     }
-
     @keyframes blink {
-        0% { opacity: 1; }
-        100% { opacity: 0.3; }
+      0% { opacity: 1; }
+      100% { opacity: 0.3; }
     }
-</style>
+  </style>
 
-<script>
+  <script>
     // Mostra il preloader per 5 secondi e poi lo rimuove con una transizione
     window.addEventListener("load", function() {
-        setTimeout(() => {
-            document.getElementById("preloader").style.opacity = "0";
-            document.getElementById("preloader").style.visibility = "hidden";
-        }, 5000);
+      setTimeout(() => {
+        document.getElementById("preloader").style.opacity = "0";
+        document.getElementById("preloader").style.visibility = "hidden";
+      }, 5000);
     });
-</script>
+  </script>
 
   <!-- MENU -->
   <div class="menu">
-   <nav>
-    <ul>
+    <nav>
+      <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#roadmap">Roadmap</a></li>
         <li><a href="#tokenomics">Tokenomics</a></li>
         <li><a href="https://built-different-cto.gitbook.io/built-different-cto/" target="_blank">Whitepaper</a></li>
-        <li><a href="https://linktr.ee/BuiltDifferentCTO" target="_blank">Linktree</a></li> <!-- Replace with your Linktree URL -->
-    </ul>
-</nav>
-
-<style>
-    nav {
+        <li><a href="https://linktr.ee/BuiltDifferentCTO" target="_blank">Linktree</a></li>
+        <li><a href="https://built-whitepaper.vercel.app/" target="_blank">UI doc</a></li>
+      </ul>
+    </nav>
+    <style>
+      nav {
         display: flex;
-        justify-content: center; /* Centers the menu horizontally */
-        align-items: center; /* Vertical alignment */
+        justify-content: center;
+        align-items: center;
         padding: 10px 20px;
-        background-color: #000; /* Background color */
-    }
-    nav ul {
-        list-style: none; /* Removes the bullet points from list items */
+        background-color: #000;
+      }
+      nav ul {
+        list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
-    }
-    nav ul li {
-        margin-right: 20px; /* Space between menu items */
-    }
-    nav ul li a {
+      }
+      nav ul li {
+        margin-right: 20px;
+      }
+      nav ul li a {
         text-decoration: none;
-        color: #fff; /* Text color */
+        color: #fff;
         font-size: 16px;
         padding: 5px 10px;
         transition: background-color 0.3s ease;
-    }
-    nav ul li a:hover {
-        background-color: #444; /* Background color on hover */
-    }
-</style>
-
+      }
+      nav ul li a:hover {
+        background-color: #444;
+      }
+    </style>
   </div>
 
   <!-- SEZIONE BANNER -->
@@ -469,11 +464,12 @@
   <div class="social-text">
     <p id="ca-text" onclick="copyCA()">CA: vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</p>
   </div>
-<section class="video-section" style="text-align: center; margin: 20px;">
+
+  <section class="video-section" style="text-align: center; margin: 20px;">
     <!-- Bottone per attivare il video -->
-   <style>
-    /* Stili per il bottone */
-    #toggleVideo {
+    <style>
+      /* Stili per il bottone */
+      #toggleVideo {
         background-color: black;
         color: white;
         font-family: 'Bangers', sans-serif;
@@ -484,55 +480,50 @@
         transition: 0.3s;
         display: block;
         margin: 20px auto;
-    }
-
-    #toggleVideo:hover {
+      }
+      #toggleVideo:hover {
         background-color: white;
         color: black;
-    }
-
-    /* Stili per il contenitore del video */
-    #videoContainer {
+      }
+      /* Stili per il contenitore del video */
+      #videoContainer {
         width: 100%;
         max-width: 900px;
         margin: 20px auto;
         position: relative;
-        border: 5px solid white;  /* Bordo bianco attorno al video */
+        border: 5px solid white;
         padding: 10px;
         box-sizing: border-box;
-        border-radius: 10px;  /* Angoli arrotondati */
-        background-color: black;  /* Sfondo nero dietro il video */
-    }
-
-    #videoContainer iframe {
+        border-radius: 10px;
+        background-color: black;
+      }
+      #videoContainer iframe {
         width: 100%;
         height: 500px;
         border: none;
-        border-radius: 8px;  /* Bordo arrotondato anche per il video */
-    }
-
-    /* Media queries per mobile */
-    @media only screen and (max-width: 768px) {
+        border-radius: 8px;
+      }
+      /* Media queries per mobile */
+      @media only screen and (max-width: 768px) {
         #toggleVideo {
-            font-size: 18px;
+          font-size: 18px;
         }
-
         #videoContainer iframe {
-            height: 300px;
+          height: 300px;
         }
-    }
-</style>
+      }
+    </style>
 
-<!-- Contenitore del video -->
-<div id="videoContainer">
-    <iframe id="videoIframe" 
-            src="https://www.youtube.com/embed/4z-TgSMCUK8?autoplay=1&rel=0&playsinline=1" 
-            title="YouTube video player" 
-            allow="autoplay; encrypted-media; picture-in-picture" 
-            allowfullscreen>
-    </iframe>
-</div>
-
+    <!-- Contenitore del video -->
+    <div id="videoContainer">
+      <iframe id="videoIframe" 
+              src="https://www.youtube.com/embed/4z-TgSMCUK8?autoplay=1&rel=0&playsinline=1" 
+              title="YouTube video player" 
+              allow="autoplay; encrypted-media; picture-in-picture" 
+              allowfullscreen>
+      </iframe>
+    </div>
+  </section>
 
   <!-- CONTENUTO PRINCIPALE -->
   <div class="container" id="main-content">
@@ -550,161 +541,147 @@
       </div>
     </div>
 
-<head>
+    <head>
+      <!-- Aggiungi il link al font Bangers -->
+      <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    </head>
 
-  <!-- Aggiungi il link al font Bangers -->
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-</head>
+    <section id="memes-section" class="memes-section">
+      <button id="toggle-memes" class="toggle-button">MEMES</button>
+      <div id="memes-content" class="memes-content">
+        <div class="memes-gallery">
+          <img src="https://imagizer.imageshack.com/img923/6915/muC7w5.jpg" alt="Meme 1" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img922/7293/ADnJLL.jpg" alt="Meme 2" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img923/3972/kpcgR2.jpg" alt="Meme 3" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img924/9686/kA5i6n.jpg" alt="Meme 4" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img924/2116/AENfVU.jpg" alt="Meme 5" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img922/9595/D1vVmz.jpg" alt="Meme 6" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img924/4436/BRdqC4.jpg" alt="Meme 7" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img923/879/VfbReM.jpg" alt="Meme 8" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img923/239/yKGzd2.jpg" alt="Meme 9" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img922/3120/5Xz4wM.jpg" alt="Meme 10" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img922/6515/S5KUC5.jpg" alt="Meme 11" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img924/6870/YW7rvu.jpg" alt="Meme 12" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img922/2950/OV38pO.jpg" alt="Meme 13" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img924/9500/YpjqUu.jpg" alt="Meme 14" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img924/2905/HIxjky.jpg" alt="Meme 15" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img923/5168/vLFyLV.jpg" alt="Meme 16" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img923/3195/W1puZo.jpg" alt="Meme 17" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img924/6739/90oCNX.jpg" alt="Meme 18" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img922/1601/14Shs3.jpg" alt="Meme 19" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img923/637/LFdB5T.jpg" alt="Meme 20" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img922/3531/bALe0F.jpg" alt="Meme 21" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img924/7909/NukhfX.jpg" alt="Meme 22" class="meme-image">
+          <img src="https://imagizer.imageshack.com/img923/541/hHRq7b.jpg" alt="Meme 23" class="meme-image">
+        </div>
+      </div>
+    </section>
 
-<section id="memes-section" class="memes-section">
-  <button id="toggle-memes" class="toggle-button">MEMES</button>
-  <div id="memes-content" class="memes-content">
-    <div class="memes-gallery">
-      <img src="https://imagizer.imageshack.com/img923/6915/muC7w5.jpg" alt="Meme 1" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img922/7293/ADnJLL.jpg" alt="Meme 2" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img923/3972/kpcgR2.jpg" alt="Meme 3" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img924/9686/kA5i6n.jpg" alt="Meme 4" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img924/2116/AENfVU.jpg" alt="Meme 5" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img922/9595/D1vVmz.jpg" alt="Meme 6" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img924/4436/BRdqC4.jpg" alt="Meme 7" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img923/879/VfbReM.jpg" alt="Meme 8" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img923/239/yKGzd2.jpg" alt="Meme 9" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img922/3120/5Xz4wM.jpg" alt="Meme 10" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img922/6515/S5KUC5.jpg" alt="Meme 11" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img924/6870/YW7rvu.jpg" alt="Meme 12" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img922/2950/OV38pO.jpg" alt="Meme 13" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img924/9500/YpjqUu.jpg" alt="Meme 14" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img924/2905/HIxjky.jpg" alt="Meme 15" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img923/5168/vLFyLV.jpg" alt="Meme 16" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img923/3195/W1puZo.jpg" alt="Meme 17" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img924/6739/90oCNX.jpg" alt="Meme 18" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img922/1601/14Shs3.jpg" alt="Meme 19" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img923/637/LFdB5T.jpg" alt="Meme 20" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img922/3531/bALe0F.jpg" alt="Meme 21" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img924/7909/NukhfX.jpg" alt="Meme 22" class="meme-image">
-      <img src="https://imagizer.imageshack.com/img923/541/hHRq7b.jpg" alt="Meme 23" class="meme-image">
-    </div>
-  </div>
-</section>
+    <style>
+      .memes-section {
+        width: 100%;
+        margin: 20px 0;
+        padding: 10px;
+        text-align: center;
+      }
+      .toggle-button {
+        padding: 45px 90px;
+        background-color: black;
+        color: white;
+        font-size: 54px;
+        cursor: pointer;
+        border: 3px solid white;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        font-family: 'Bangers', sans-serif;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .toggle-button:hover {
+        background-color: #555;
+        transform: scale(1.1);
+      }
+      .memes-content {
+        display: none;
+      }
+      .memes-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .memes-gallery img {
+        width: 250px;
+        height: auto;
+        margin: 10px;
+        border-radius: 8px;
+        border: 3px solid white;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+      .memes-gallery img:hover {
+        transform: scale(1.05);
+      }
+    </style>
 
-<style>
-  .memes-section {
-    width: 100%;
-    margin: 20px 0;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .toggle-button {
-    padding: 45px 90px;
-    background-color: black;
-    color: white;
-    font-size: 54px;
-    cursor: pointer;
-    border: 3px solid white;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    font-family: 'Bangers', sans-serif;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-
-  .toggle-button:hover {
-    background-color: #555;
-    transform: scale(1.1);
-  }
-
-  .memes-content {
-    display: none;
-  }
-
-  .memes-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .memes-gallery img {
-    width: 250px;
-    height: auto;
-    margin: 10px;
-    border-radius: 8px;
-    border: 3px solid white;
-    cursor: pointer;
-    transition: transform 0.3s;
-  }
-
-  .memes-gallery img:hover {
-    transform: scale(1.05);
-  }
-</style>
-
-<script>
-  document.getElementById('toggle-memes').addEventListener('click', function() {
-    var memesContent = document.getElementById('memes-content');
-    if (memesContent.style.display === 'none' || memesContent.style.display === '') {
-      memesContent.style.display = 'block';
-    } else {
-      memesContent.style.display = 'none';
-    }
-  });
-
-  // Gestisci il click sulle immagini per aprirle ingrandite nel sito
-  document.querySelectorAll('.meme-image').forEach(function(image) {
-    image.addEventListener('click', function() {
-      var fullImageUrl = this.src;
-      var imageModal = document.createElement('div');
-      imageModal.classList.add('image-modal');
-      imageModal.innerHTML = `<div class="modal-content"><img src="${fullImageUrl}" alt="Meme" class="modal-image"><span class="close">&times;</span></div>`;
-      document.body.appendChild(imageModal);
-
-      // Chiudi la finestra modale
-      document.querySelector('.close').addEventListener('click', function() {
-        imageModal.remove();
+    <script>
+      document.getElementById('toggle-memes').addEventListener('click', function() {
+        var memesContent = document.getElementById('memes-content');
+        if (memesContent.style.display === 'none' || memesContent.style.display === '') {
+          memesContent.style.display = 'block';
+        } else {
+          memesContent.style.display = 'none';
+        }
       });
-    });
-  });
-</script>
+      // Gestisci il click sulle immagini per aprirle ingrandite nel sito
+      document.querySelectorAll('.meme-image').forEach(function(image) {
+        image.addEventListener('click', function() {
+          var fullImageUrl = this.src;
+          var imageModal = document.createElement('div');
+          imageModal.classList.add('image-modal');
+          imageModal.innerHTML = `<div class="modal-content"><img src="${fullImageUrl}" alt="Meme" class="modal-image"><span class="close">&times;</span></div>`;
+          document.body.appendChild(imageModal);
+          // Chiudi la finestra modale
+          document.querySelector('.close').addEventListener('click', function() {
+            imageModal.remove();
+          });
+        });
+      });
+    </script>
 
-<style>
-  .image-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .modal-content {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
-  }
-
-  .modal-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    color: white;
-    font-size: 36px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .close:hover {
-    color: #ff4d4d;
-  }
-</style>
-
+    <style>
+      .image-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .modal-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+      }
+      .modal-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: white;
+        font-size: 36px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .close:hover {
+        color: #ff4d4d;
+      }
+    </style>
 
     <!-- SEZIONE HOW TO BUY -->
     <div id="how-to-buy" class="section" style="margin-top: 120px;">
@@ -719,28 +696,28 @@
           <p>Obtain Solana directly through the Phantom wallet, or alternatively, transfer Solana to your new wallet from an exchange.</p>
         </div>
       </div>
-
       <!-- SEZIONE SWAP INFO -->
       <div class="swap-info">
         <h3>Swap SOL For $BUILT</h3>
         <p>Visit decentralized exchanges (DEXs) like Raydium, and paste the $BUILT contract address provided on this website to swap your SOL for $BUILT. Alternatively, click the button below.</p>
       </div>
     </div>
-<section id="roadmap" class="section">
-    <h2>ROADMAP</h2>
-    <div class="text-box">
-        <ul>
-            <li><span class="green-arrow">➤</span> Phase 1: Take control of the token and build the community</li>
-            <li><span class="green-arrow">➤</span> Phase 2: Develop and launch the website</li>
-            <li><span class="white-arrow">➤</span> Phase 3: Establish strategic partnerships and grow the user base</li>
-            <li><span class="white-arrow">➤</span> Phase 4: Expand the market and introduce new technological developments</li>
-            <li><span class="white-arrow">➤</span> Phase 5: Launch the $BUILT merch</li>
-        </ul>
-    </div>
-</section>
 
-<style>
-    #roadmap {
+    <section id="roadmap" class="section">
+      <h2>ROADMAP</h2>
+      <div class="text-box">
+        <ul>
+          <li><span class="green-arrow">➤</span> Phase 1: Take control of the token and build the community</li>
+          <li><span class="green-arrow">➤</span> Phase 2: Develop and launch the website</li>
+          <li><span class="white-arrow">➤</span> Phase 3: Establish strategic partnerships and grow the user base</li>
+          <li><span class="white-arrow">➤</span> Phase 4: Expand the market and introduce new technological developments</li>
+          <li><span class="white-arrow">➤</span> Phase 5: Launch the $BUILT merch</li>
+        </ul>
+      </div>
+    </section>
+
+    <style>
+      #roadmap {
         text-align: center;
         padding: 50px 20px;
         border: 2px solid white;
@@ -748,33 +725,28 @@
         max-width: 800px;
         background-color: black;
         border-radius: 10px;
-    }
-
-    #roadmap h2 {
+      }
+      #roadmap h2 {
         font-family: 'Bangers', sans-serif;
         font-size: 2.5em;
         color: white;
-    }
-
-    #roadmap .text-box ul {
+      }
+      #roadmap .text-box ul {
         list-style: none;
         padding: 0;
-    }
-
-    #roadmap .text-box li {
+      }
+      #roadmap .text-box li {
         font-size: 1.2em;
         color: white;
         margin: 10px 0;
-    }
-
-    .green-arrow {
+      }
+      .green-arrow {
         color: #00ff00;
-    }
-
-    .white-arrow {
+      }
+      .white-arrow {
         color: white;
-    }
-</style>
+      }
+    </style>
 
     <!-- SEZIONE TOKENOMICS -->
     <div id="tokenomics" class="section">
@@ -806,5 +778,38 @@
     }
   </script>
 
+  <!-- Ripple Effect: Aggiunta dell'effetto al click -->
+  <script>
+    document.addEventListener("click", function(e) {
+      // Crea l'elemento span per il ripple
+      const ripple = document.createElement("span");
+      ripple.classList.add("ripple");
+      
+      // Seleziona l'elemento target del click
+      let target = e.target;
+      
+      // Se il target ha posizione "static", impostala su "relative"
+      if (getComputedStyle(target).position === "static") {
+        target.style.position = "relative";
+      }
+      
+      // Calcola la dimensione necessaria in base all'elemento
+      const rect = target.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      ripple.style.width = ripple.style.height = size + "px";
+      
+      // Posiziona il ripple in base al punto in cui è avvenuto il click
+      ripple.style.left = e.clientX - rect.left - size / 2 + "px";
+      ripple.style.top = e.clientY - rect.top - size / 2 + "px";
+      
+      // Aggiungi il ripple all'elemento target
+      target.appendChild(ripple);
+      
+      // Rimuovi l'elemento al termine dell'animazione
+      ripple.addEventListener("animationend", function() {
+        ripple.remove();
+      });
+    });
+  </script>
 </body>
 </html>
