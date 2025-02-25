@@ -466,7 +466,7 @@
 
   <!-- Testo CA copiabile -->
   <div class="social-text">
-    <p id="ca-text" onclick="copyCA()">CA: vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</p>
+    <p id="ca-text" onclick="copyCA()">vsDLJBTQZTFcnvrosoA49Czqy9qZGu4tgjh768wpump</p>
   </div>
 
   <section class="video-section" style="text-align: center; margin: 20px;">
@@ -518,16 +518,7 @@
       }
     </style>
 
-    <!-- Contenitore del video -->
-    <div id="videoContainer">
-      <iframe id="videoIframe" 
-              src="https://www.youtube.com/embed/4z-TgSMCUK8?autoplay=1&rel=0&playsinline=1" 
-              title="YouTube video player" 
-              allow="autoplay; encrypted-media; picture-in-picture" 
-              allowfullscreen>
-      </iframe>
-    </div>
-  </section>
+   
 
   <!-- CONTENUTO PRINCIPALE -->
   <div class="container" id="main-content">
@@ -549,7 +540,16 @@
       <!-- Aggiungi il link al font Bangers -->
       <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     </head>
-
+ <!-- Contenitore del video -->
+    <div id="videoContainer">
+      <iframe id="videoIframe" 
+              src="https://www.youtube.com/embed/4z-TgSMCUK8?autoplay=1&rel=0&playsinline=1" 
+              title="YouTube video player" 
+              allow="autoplay; encrypted-media; picture-in-picture" 
+              allowfullscreen>
+      </iframe>
+    </div>
+  </section>
     <section id="memes-section" class="memes-section">
       <button id="toggle-memes" class="toggle-button">MEMES</button>
       <div id="memes-content" class="memes-content">
@@ -707,18 +707,47 @@
       </div>
     </div>
 
-    <section id="roadmap" class="section">
-      <h2>ROADMAP</h2>
-      <div class="text-box">
-        <ul>
-          <li><span class="green-arrow">➤</span> Phase 1: Take control of the token and build the community</li>
-          <li><span class="green-arrow">➤</span> Phase 2: Develop and launch the website</li>
-          <li><span class="white-arrow">➤</span> Phase 3: Establish strategic partnerships and grow the user base</li>
-          <li><span class="white-arrow">➤</span> Phase 4: Expand the market and introduce new technological developments</li>
-          <li><span class="white-arrow">➤</span> Phase 5: Launch the $BUILT merch</li>
-        </ul>
-      </div>
-    </section>
+    <section id="roadmap" style="text-align: center; padding: 50px; background-color: black; color: white; font-family: 'Bangers', cursive;">
+    <h2 style="font-size: 2.5em; margin-bottom: 20px;">ROADMAP</h2>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <span class="blinking-dot"></span>
+            <span style="font-size: 1.5em;">Takeover the token</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <span class="blinking-dot"></span>
+            <span style="font-size: 1.5em;">Establish a safe MC floor</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <span class="blinking-dot"></span>
+            <span style="font-size: 1.5em;">Establish a trusted team for our new Socials</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <span class="blinking-dot"></span>
+            <span style="font-size: 1.5em;">Launch Website</span>
+        </div>
+        <div style="font-size: 1.5em;">Schedule WEEKLY X AMA's</div>
+        <div style="font-size: 1.5em;">MEME contest launch</div>
+        <div style="font-size: 1.5em;">Reach back the OLD ATH</div>
+    </div>
+</section>
+
+<style>
+    .blinking-dot {
+        width: 15px;
+        height: 15px;
+        background-color: limegreen;
+        border-radius: 50%;
+        display: inline-block;
+        animation: blink 1s infinite alternate;
+    }
+
+    @keyframes blink {
+        0% { opacity: 1; }
+        100% { opacity: 0.3; }
+    }
+</style>
+
 
     <style>
       #roadmap {
@@ -812,6 +841,7 @@
       // Rimuovi l'elemento al termine dell'animazione
       ripple.addEventListener("animationend", function() {
         ripple.remove();
+
       });
     });
   </script>
